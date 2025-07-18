@@ -1,0 +1,6 @@
+Z:\workspaces\copper_ext\cti.net\CTI\CTI\bin\Release\CTI.XML
+Z:\workspaces\copper_ext\cti.net\CTI\CTI\bin\Release\CTI.dll
+Z:\workspaces\copper_ext\cti.net\CTI\CTI\bin\Release\CTI.pdb
+Z:\workspaces\copper_ext\cti.net\CTI\CTI\obj\Release\CTI.dll
+Z:\workspaces\copper_ext\cti.net\CTI\CTI\obj\Release\CTI.pdb
+Z:\workspaces\copper_ext\cti.net\CTI\CTI\obj\Release\CTI.csprojResolveAssemblyReference.cache

@@ -1,0 +1,10 @@
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamples\bin\Release\files\test.css
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamples\bin\Release\files\test.html
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamples\bin\Release\ConsoleExamples.exe
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamples\bin\Release\ConsoleExamples.pdb
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamples\bin\Release\CTI.dll
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamples\bin\Release\CTI.pdb
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamples\bin\Release\CTI.xml
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamples\obj\x86\Release\ConsoleExamples.csprojResolveAssemblyReference.cache
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamples\obj\x86\Release\ConsoleExamples.exe
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamples\obj\x86\Release\ConsoleExamples.pdb

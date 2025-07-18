@@ -1,0 +1,2953 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<reflection>
+  <assemblies>
+    <assembly name="CTI">
+      <assemblydata version="1.0.0.0" culture="" key="" hash="SHA1" />
+      <attributes>
+        <attribute>
+          <type api="T:System.Reflection.AssemblyTitleAttribute" ref="true" />
+          <argument>
+            <type api="T:System.String" ref="true" />
+            <value>CTI</value>
+          </argument>
+        </attribute>
+        <attribute>
+          <type api="T:System.Reflection.AssemblyDescriptionAttribute" ref="true" />
+          <argument>
+            <type api="T:System.String" ref="true" />
+            <value />
+          </argument>
+        </attribute>
+        <attribute>
+          <type api="T:System.Reflection.AssemblyConfigurationAttribute" ref="true" />
+          <argument>
+            <type api="T:System.String" ref="true" />
+            <value />
+          </argument>
+        </attribute>
+        <attribute>
+          <type api="T:System.Reflection.AssemblyCompanyAttribute" ref="true" />
+          <argument>
+            <type api="T:System.String" ref="true" />
+            <value>Microsoft</value>
+          </argument>
+        </attribute>
+        <attribute>
+          <type api="T:System.Reflection.AssemblyProductAttribute" ref="true" />
+          <argument>
+            <type api="T:System.String" ref="true" />
+            <value>CTI</value>
+          </argument>
+        </attribute>
+        <attribute>
+          <type api="T:System.Reflection.AssemblyCopyrightAttribute" ref="true" />
+          <argument>
+            <type api="T:System.String" ref="true" />
+            <value>Copyright © Microsoft 2011</value>
+          </argument>
+        </attribute>
+        <attribute>
+          <type api="T:System.Reflection.AssemblyTrademarkAttribute" ref="true" />
+          <argument>
+            <type api="T:System.String" ref="true" />
+            <value />
+          </argument>
+        </attribute>
+        <attribute>
+          <type api="T:System.Runtime.InteropServices.ComVisibleAttribute" ref="true" />
+          <argument>
+            <type api="T:System.Boolean" ref="false" />
+            <value>False</value>
+          </argument>
+        </attribute>
+        <attribute>
+          <type api="T:System.Runtime.InteropServices.GuidAttribute" ref="true" />
+          <argument>
+            <type api="T:System.String" ref="true" />
+            <value>15e7e996-25d8-4268-a502-63672a356200</value>
+          </argument>
+        </attribute>
+        <attribute>
+          <type api="T:System.Reflection.AssemblyFileVersionAttribute" ref="true" />
+          <argument>
+            <type api="T:System.String" ref="true" />
+            <value>1.0.0.0</value>
+          </argument>
+        </attribute>
+      </attributes>
+    </assembly>
+  </assemblies>
+  <apis>
+    <api id="N:Zamasoft.CTI">
+      <apidata name="Zamasoft.CTI" group="namespace" />
+      <elements>
+        <element api="T:Zamasoft.CTI.Utils" />
+        <element api="T:Zamasoft.CTI.StateCode" />
+        <element api="T:Zamasoft.CTI.TranscoderException" />
+        <element api="T:Zamasoft.CTI.AbortMode" />
+        <element api="T:Zamasoft.CTI.Session" />
+        <element api="T:Zamasoft.CTI.Driver" />
+        <element api="T:Zamasoft.CTI.DriverManager" />
+      </elements>
+    </api>
+    <api id="T:Zamasoft.CTI.AbortMode">
+      <apidata name="AbortMode" group="type" subgroup="enumeration" />
+      <typedata visibility="public" sealed="true" serializable="false" layout="auto" format="ansi" />
+      <elements>
+        <element api="F:Zamasoft.CTI.AbortMode.NORMAL" />
+        <element api="F:Zamasoft.CTI.AbortMode.FORCE" />
+      </elements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.AbortMode.FORCE">
+      <apidata name="FORCE" group="member" subgroup="field" />
+      <memberdata visibility="public" static="true" />
+      <fielddata literal="true" initonly="false" serialized="true" />
+      <returns>
+        <type api="T:Zamasoft.CTI.AbortMode" ref="false" />
+      </returns>
+      <value>1</value>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.AbortMode" ref="false" />
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.AbortMode.NORMAL">
+      <apidata name="NORMAL" group="member" subgroup="field" />
+      <memberdata visibility="public" static="true" />
+      <fielddata literal="true" initonly="false" serialized="true" />
+      <returns>
+        <type api="T:Zamasoft.CTI.AbortMode" ref="false" />
+      </returns>
+      <value>0</value>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.AbortMode" ref="false" />
+      </containers>
+    </api>
+    <api id="T:Zamasoft.CTI.Driver">
+      <apidata name="Driver" group="type" subgroup="interface" />
+      <typedata visibility="public" abstract="true" serializable="false" layout="auto" format="ansi" />
+      <elements>
+        <element api="M:Zamasoft.CTI.Driver.getSession(System.Uri,System.Collections.Hashtable)" />
+      </elements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Driver.getSession(System.Uri,System.Collections.Hashtable)">
+      <apidata name="getSession" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <parameters>
+        <parameter name="uri">
+          <type api="T:System.Uri" ref="true" />
+        </parameter>
+        <parameter name="props">
+          <type api="T:System.Collections.Hashtable" ref="true" />
+        </parameter>
+      </parameters>
+      <returns>
+        <type api="T:Zamasoft.CTI.Session" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Driver" ref="true" />
+      </containers>
+    </api>
+    <api id="T:Zamasoft.CTI.DriverManager">
+      <apidata name="DriverManager" group="type" subgroup="class" />
+      <typedata visibility="public" serializable="false" layout="auto" format="ansi" />
+      <family>
+        <ancestors>
+          <type api="T:System.Object" ref="true" />
+        </ancestors>
+      </family>
+      <elements>
+        <element api="M:Zamasoft.CTI.DriverManager.getDriver(System.Uri)" />
+        <element api="M:Zamasoft.CTI.DriverManager.getSession(System.Uri,System.Collections.Hashtable)" />
+        <element api="M:Zamasoft.CTI.DriverManager.getSession(System.Uri,System.String,System.String)" />
+        <element api="M:Zamasoft.CTI.DriverManager.#ctor" />
+        <element api="M:System.Object.ToString">
+          <apidata name="ToString" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <returns>
+            <type api="T:System.String" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.Equals(System.Object)">
+          <apidata name="Equals" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <parameters>
+            <parameter name="obj">
+              <type api="T:System.Object" ref="true" />
+            </parameter>
+          </parameters>
+          <returns>
+            <type api="T:System.Boolean" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.GetHashCode">
+          <apidata name="GetHashCode" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <returns>
+            <type api="T:System.Int32" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.GetType">
+          <apidata name="GetType" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="false" />
+          <returns>
+            <type api="T:System.Type" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.Finalize">
+          <apidata name="Finalize" group="member" subgroup="method" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="true" />
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.MemberwiseClone">
+          <apidata name="MemberwiseClone" group="member" subgroup="method" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="false" />
+          <returns>
+            <type api="T:System.Object" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+      </elements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.DriverManager.#ctor">
+      <apidata name=".ctor" group="member" subgroup="constructor" />
+      <memberdata visibility="public" special="true" />
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.DriverManager" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.DriverManager.getDriver(System.Uri)">
+      <apidata name="getDriver" group="member" subgroup="method" />
+      <memberdata visibility="public" static="true" />
+      <proceduredata virtual="false" />
+      <parameters>
+        <parameter name="uri">
+          <type api="T:System.Uri" ref="true" />
+        </parameter>
+      </parameters>
+      <returns>
+        <type api="T:Zamasoft.CTI.Driver" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.DriverManager" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.DriverManager.getSession(System.Uri,System.Collections.Hashtable)">
+      <apidata name="getSession" group="member" subgroup="method" />
+      <memberdata visibility="public" static="true" />
+      <proceduredata virtual="false" />
+      <parameters>
+        <parameter name="uri">
+          <type api="T:System.Uri" ref="true" />
+        </parameter>
+        <parameter name="props">
+          <type api="T:System.Collections.Hashtable" ref="true" />
+        </parameter>
+      </parameters>
+      <returns>
+        <type api="T:Zamasoft.CTI.Session" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.DriverManager" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.DriverManager.getSession(System.Uri,System.String,System.String)">
+      <apidata name="getSession" group="member" subgroup="method" />
+      <memberdata visibility="public" static="true" />
+      <proceduredata virtual="false" />
+      <parameters>
+        <parameter name="uri">
+          <type api="T:System.Uri" ref="true" />
+        </parameter>
+        <parameter name="user">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+        <parameter name="password">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+      </parameters>
+      <returns>
+        <type api="T:Zamasoft.CTI.Session" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.DriverManager" ref="true" />
+      </containers>
+    </api>
+    <api id="T:Zamasoft.CTI.Session">
+      <apidata name="Session" group="type" subgroup="interface" />
+      <typedata visibility="public" abstract="true" serializable="false" layout="auto" format="ansi" />
+      <implements>
+        <type api="T:System.IDisposable" ref="true" />
+      </implements>
+      <elements>
+        <element api="M:Zamasoft.CTI.Session.GetServerInfo(System.String)" />
+        <element api="M:Zamasoft.CTI.Session.Property(System.String,System.String)" />
+        <element api="M:Zamasoft.CTI.Session.Resource(Zamasoft.CTI.Source.SourceInfo)" />
+        <element api="M:Zamasoft.CTI.Session.Resource(Zamasoft.CTI.Source.SourceInfo,System.IO.Stream)" />
+        <element api="M:Zamasoft.CTI.Session.Transcode(Zamasoft.CTI.Source.SourceInfo)" />
+        <element api="M:Zamasoft.CTI.Session.Transcode(Zamasoft.CTI.Source.SourceInfo,System.IO.Stream)" />
+        <element api="M:Zamasoft.CTI.Session.Transcode(System.String)" />
+        <element api="M:Zamasoft.CTI.Session.Join" />
+        <element api="M:Zamasoft.CTI.Session.Abort(Zamasoft.CTI.AbortMode)" />
+        <element api="M:Zamasoft.CTI.Session.Reset" />
+        <element api="M:Zamasoft.CTI.Session.Close" />
+        <element api="P:Zamasoft.CTI.Session.Results" />
+        <element api="P:Zamasoft.CTI.Session.MessageHandler" />
+        <element api="P:Zamasoft.CTI.Session.ProgressListener" />
+        <element api="P:Zamasoft.CTI.Session.Continuous" />
+        <element api="P:Zamasoft.CTI.Session.SourceResolver" />
+        <element api="M:System.IDisposable.Dispose">
+          <apidata name="Dispose" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata abstract="true" virtual="true" />
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.IDisposable" ref="true" />
+          </containers>
+        </element>
+      </elements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Session.Abort(Zamasoft.CTI.AbortMode)">
+      <apidata name="Abort" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <parameters>
+        <parameter name="mode">
+          <type api="T:Zamasoft.CTI.AbortMode" ref="false" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Session" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Session.Close">
+      <apidata name="Close" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Session" ref="true" />
+      </containers>
+    </api>
+    <api id="P:Zamasoft.CTI.Session.Continuous">
+      <apidata name="Continuous" group="member" subgroup="property" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <propertydata set="true" />
+      <setter name="set_Continuous" />
+      <returns>
+        <type api="T:System.Boolean" ref="false" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Session" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Session.GetServerInfo(System.String)">
+      <apidata name="GetServerInfo" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <parameters>
+        <parameter name="uri">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+      </parameters>
+      <returns>
+        <type api="T:System.IO.Stream" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Session" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Session.Join">
+      <apidata name="Join" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Session" ref="true" />
+      </containers>
+    </api>
+    <api id="P:Zamasoft.CTI.Session.MessageHandler">
+      <apidata name="MessageHandler" group="member" subgroup="property" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <propertydata set="true" />
+      <setter name="set_MessageHandler" />
+      <returns>
+        <type api="T:Zamasoft.CTI.Message.MessageHandler" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Session" ref="true" />
+      </containers>
+    </api>
+    <api id="P:Zamasoft.CTI.Session.ProgressListener">
+      <apidata name="ProgressListener" group="member" subgroup="property" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <propertydata set="true" />
+      <setter name="set_ProgressListener" />
+      <returns>
+        <type api="T:Zamasoft.CTI.Progress.ProgressListener" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Session" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Session.Property(System.String,System.String)">
+      <apidata name="Property" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <parameters>
+        <parameter name="key">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+        <parameter name="value">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Session" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Session.Reset">
+      <apidata name="Reset" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Session" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Session.Resource(Zamasoft.CTI.Source.SourceInfo)">
+      <apidata name="Resource" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <parameters>
+        <parameter name="info">
+          <type api="T:Zamasoft.CTI.Source.SourceInfo" ref="true" />
+        </parameter>
+      </parameters>
+      <returns>
+        <type api="T:System.IO.Stream" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Session" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Session.Resource(Zamasoft.CTI.Source.SourceInfo,System.IO.Stream)">
+      <apidata name="Resource" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <parameters>
+        <parameter name="info">
+          <type api="T:Zamasoft.CTI.Source.SourceInfo" ref="true" />
+        </parameter>
+        <parameter name="input">
+          <type api="T:System.IO.Stream" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Session" ref="true" />
+      </containers>
+    </api>
+    <api id="P:Zamasoft.CTI.Session.Results">
+      <apidata name="Results" group="member" subgroup="property" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <propertydata set="true" />
+      <setter name="set_Results" />
+      <returns>
+        <type api="T:Zamasoft.CTI.Result.Results" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Session" ref="true" />
+      </containers>
+    </api>
+    <api id="P:Zamasoft.CTI.Session.SourceResolver">
+      <apidata name="SourceResolver" group="member" subgroup="property" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <propertydata set="true" />
+      <setter name="set_SourceResolver" />
+      <returns>
+        <type api="T:Zamasoft.CTI.Source.SourceResolver" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Session" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Session.Transcode(System.String)">
+      <apidata name="Transcode" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <parameters>
+        <parameter name="uri">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Session" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Session.Transcode(Zamasoft.CTI.Source.SourceInfo)">
+      <apidata name="Transcode" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <parameters>
+        <parameter name="info">
+          <type api="T:Zamasoft.CTI.Source.SourceInfo" ref="true" />
+        </parameter>
+      </parameters>
+      <returns>
+        <type api="T:System.IO.Stream" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Session" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Session.Transcode(Zamasoft.CTI.Source.SourceInfo,System.IO.Stream)">
+      <apidata name="Transcode" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <parameters>
+        <parameter name="info">
+          <type api="T:Zamasoft.CTI.Source.SourceInfo" ref="true" />
+        </parameter>
+        <parameter name="input">
+          <type api="T:System.IO.Stream" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Session" ref="true" />
+      </containers>
+    </api>
+    <api id="T:Zamasoft.CTI.StateCode">
+      <apidata name="StateCode" group="type" subgroup="enumeration" />
+      <typedata visibility="public" sealed="true" serializable="false" layout="auto" format="ansi" />
+      <elements>
+        <element api="F:Zamasoft.CTI.StateCode.READABLE" />
+        <element api="F:Zamasoft.CTI.StateCode.BROKEN" />
+      </elements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.StateCode.BROKEN">
+      <apidata name="BROKEN" group="member" subgroup="field" />
+      <memberdata visibility="public" static="true" />
+      <fielddata literal="true" initonly="false" serialized="true" />
+      <returns>
+        <type api="T:Zamasoft.CTI.StateCode" ref="false" />
+      </returns>
+      <value>1</value>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.StateCode" ref="false" />
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.StateCode.READABLE">
+      <apidata name="READABLE" group="member" subgroup="field" />
+      <memberdata visibility="public" static="true" />
+      <fielddata literal="true" initonly="false" serialized="true" />
+      <returns>
+        <type api="T:Zamasoft.CTI.StateCode" ref="false" />
+      </returns>
+      <value>0</value>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.StateCode" ref="false" />
+      </containers>
+    </api>
+    <api id="T:Zamasoft.CTI.TranscoderException">
+      <apidata name="TranscoderException" group="type" subgroup="class" />
+      <typedata visibility="public" serializable="false" layout="auto" format="ansi" />
+      <family>
+        <ancestors>
+          <type api="T:System.Exception" ref="true" />
+          <type api="T:System.Object" ref="true" />
+        </ancestors>
+      </family>
+      <elements>
+        <element api="M:Zamasoft.CTI.TranscoderException.#ctor(Zamasoft.CTI.StateCode,System.Int16,System.String[],System.String)" />
+        <element api="P:Zamasoft.CTI.TranscoderException.Code" />
+        <element api="P:Zamasoft.CTI.TranscoderException.Args" />
+        <element api="P:Zamasoft.CTI.TranscoderException.State" />
+        <element api="M:System.Exception.GetBaseException">
+          <apidata name="GetBaseException" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <returns>
+            <type api="T:System.Exception" ref="true" />
+          </returns>
+          <implements>
+            <member api="M:System.Runtime.InteropServices._Exception.GetBaseException">
+              <type api="T:System.Runtime.InteropServices._Exception" ref="true" />
+            </member>
+          </implements>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Exception" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Exception.ToString">
+          <apidata name="ToString" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <overrides>
+            <member api="M:System.Object.ToString">
+              <type api="T:System.Object" ref="true" />
+            </member>
+          </overrides>
+          <returns>
+            <type api="T:System.String" ref="true" />
+          </returns>
+          <implements>
+            <member api="M:System.Runtime.InteropServices._Exception.ToString">
+              <type api="T:System.Runtime.InteropServices._Exception" ref="true" />
+            </member>
+          </implements>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Exception" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+          <apidata name="GetObjectData" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <parameters>
+            <parameter name="info">
+              <type api="T:System.Runtime.Serialization.SerializationInfo" ref="true" />
+            </parameter>
+            <parameter name="context">
+              <type api="T:System.Runtime.Serialization.StreamingContext" ref="false" />
+            </parameter>
+          </parameters>
+          <implements>
+            <member api="M:System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+              <type api="T:System.Runtime.Serialization.ISerializable" ref="true" />
+            </member>
+            <member api="M:System.Runtime.InteropServices._Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+              <type api="T:System.Runtime.InteropServices._Exception" ref="true" />
+            </member>
+          </implements>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Exception" ref="true" />
+          </containers>
+          <attributes>
+            <attribute>
+              <type api="T:System.Security.Permissions.SecurityPermissionAttribute" ref="true" />
+              <argument>
+                <type api="T:System.Security.Permissions.SecurityAction" ref="false" />
+                <enumValue>
+                  <field name="LinkDemand" />
+                </enumValue>
+              </argument>
+              <assignment name="Flags">
+                <type api="T:System.Security.Permissions.SecurityPermissionFlag" ref="false" />
+                <enumValue>
+                  <field name="SerializationFormatter" />
+                </enumValue>
+              </assignment>
+            </attribute>
+          </attributes>
+        </element>
+        <element api="M:System.Exception.GetType">
+          <apidata name="GetType" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" final="true" />
+          <returns>
+            <type api="T:System.Type" ref="true" />
+          </returns>
+          <implements>
+            <member api="M:System.Runtime.InteropServices._Exception.GetType">
+              <type api="T:System.Runtime.InteropServices._Exception" ref="true" />
+            </member>
+          </implements>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Exception" ref="true" />
+          </containers>
+        </element>
+        <element api="P:System.Exception.Message">
+          <apidata name="Message" group="member" subgroup="property" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <propertydata get="true" />
+          <getter name="get_Message" />
+          <returns>
+            <type api="T:System.String" ref="true" />
+          </returns>
+          <implements>
+            <member api="P:System.Runtime.InteropServices._Exception.Message">
+              <type api="T:System.Runtime.InteropServices._Exception" ref="true" />
+            </member>
+          </implements>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Exception" ref="true" />
+          </containers>
+        </element>
+        <element api="P:System.Exception.Data">
+          <apidata name="Data" group="member" subgroup="property" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <propertydata get="true" />
+          <getter name="get_Data" />
+          <returns>
+            <type api="T:System.Collections.IDictionary" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Exception" ref="true" />
+          </containers>
+        </element>
+        <element api="P:System.Exception.InnerException">
+          <apidata name="InnerException" group="member" subgroup="property" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" final="true" />
+          <propertydata get="true" />
+          <getter name="get_InnerException" />
+          <returns>
+            <type api="T:System.Exception" ref="true" />
+          </returns>
+          <implements>
+            <member api="P:System.Runtime.InteropServices._Exception.InnerException">
+              <type api="T:System.Runtime.InteropServices._Exception" ref="true" />
+            </member>
+          </implements>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Exception" ref="true" />
+          </containers>
+        </element>
+        <element api="P:System.Exception.TargetSite">
+          <apidata name="TargetSite" group="member" subgroup="property" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" final="true" />
+          <propertydata get="true" />
+          <getter name="get_TargetSite" />
+          <returns>
+            <type api="T:System.Reflection.MethodBase" ref="true" />
+          </returns>
+          <implements>
+            <member api="P:System.Runtime.InteropServices._Exception.TargetSite">
+              <type api="T:System.Runtime.InteropServices._Exception" ref="true" />
+            </member>
+          </implements>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Exception" ref="true" />
+          </containers>
+        </element>
+        <element api="P:System.Exception.StackTrace">
+          <apidata name="StackTrace" group="member" subgroup="property" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <propertydata get="true" />
+          <getter name="get_StackTrace" />
+          <returns>
+            <type api="T:System.String" ref="true" />
+          </returns>
+          <implements>
+            <member api="P:System.Runtime.InteropServices._Exception.StackTrace">
+              <type api="T:System.Runtime.InteropServices._Exception" ref="true" />
+            </member>
+          </implements>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Exception" ref="true" />
+          </containers>
+        </element>
+        <element api="P:System.Exception.HelpLink">
+          <apidata name="HelpLink" group="member" subgroup="property" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <propertydata get="true" set="true" />
+          <getter name="get_HelpLink" />
+          <setter name="set_HelpLink" />
+          <returns>
+            <type api="T:System.String" ref="true" />
+          </returns>
+          <implements>
+            <member api="P:System.Runtime.InteropServices._Exception.HelpLink">
+              <type api="T:System.Runtime.InteropServices._Exception" ref="true" />
+            </member>
+          </implements>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Exception" ref="true" />
+          </containers>
+        </element>
+        <element api="P:System.Exception.Source">
+          <apidata name="Source" group="member" subgroup="property" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <propertydata get="true" set="true" />
+          <getter name="get_Source" />
+          <setter name="set_Source" />
+          <returns>
+            <type api="T:System.String" ref="true" />
+          </returns>
+          <implements>
+            <member api="P:System.Runtime.InteropServices._Exception.Source">
+              <type api="T:System.Runtime.InteropServices._Exception" ref="true" />
+            </member>
+          </implements>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Exception" ref="true" />
+          </containers>
+        </element>
+        <element api="P:System.Exception.HResult">
+          <apidata name="HResult" group="member" subgroup="property" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="false" />
+          <propertydata get="true" set="true" />
+          <getter name="get_HResult" />
+          <setter name="set_HResult" />
+          <returns>
+            <type api="T:System.Int32" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Exception" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.Equals(System.Object)">
+          <apidata name="Equals" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <parameters>
+            <parameter name="obj">
+              <type api="T:System.Object" ref="true" />
+            </parameter>
+          </parameters>
+          <returns>
+            <type api="T:System.Boolean" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.GetHashCode">
+          <apidata name="GetHashCode" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <returns>
+            <type api="T:System.Int32" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.Finalize">
+          <apidata name="Finalize" group="member" subgroup="method" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="true" />
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.MemberwiseClone">
+          <apidata name="MemberwiseClone" group="member" subgroup="method" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="false" />
+          <returns>
+            <type api="T:System.Object" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+      </elements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.TranscoderException.#ctor(Zamasoft.CTI.StateCode,System.Int16,System.String[],System.String)">
+      <apidata name=".ctor" group="member" subgroup="constructor" />
+      <memberdata visibility="public" special="true" />
+      <parameters>
+        <parameter name="state">
+          <type api="T:Zamasoft.CTI.StateCode" ref="false" />
+        </parameter>
+        <parameter name="code">
+          <type api="T:System.Int16" ref="false" />
+        </parameter>
+        <parameter name="args">
+          <arrayOf rank="1">
+            <type api="T:System.String" ref="true" />
+          </arrayOf>
+        </parameter>
+        <parameter name="message">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.TranscoderException" ref="true" />
+      </containers>
+    </api>
+    <api id="P:Zamasoft.CTI.TranscoderException.Args">
+      <apidata name="Args" group="member" subgroup="property" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <propertydata get="true" />
+      <getter name="get_Args" />
+      <returns>
+        <arrayOf rank="1">
+          <type api="T:System.String" ref="true" />
+        </arrayOf>
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.TranscoderException" ref="true" />
+      </containers>
+    </api>
+    <api id="P:Zamasoft.CTI.TranscoderException.Code">
+      <apidata name="Code" group="member" subgroup="property" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <propertydata get="true" />
+      <getter name="get_Code" />
+      <returns>
+        <type api="T:System.Int16" ref="false" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.TranscoderException" ref="true" />
+      </containers>
+    </api>
+    <api id="P:Zamasoft.CTI.TranscoderException.State">
+      <apidata name="State" group="member" subgroup="property" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <propertydata get="true" />
+      <getter name="get_State" />
+      <returns>
+        <type api="T:Zamasoft.CTI.StateCode" ref="false" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.TranscoderException" ref="true" />
+      </containers>
+    </api>
+    <api id="T:Zamasoft.CTI.Utils">
+      <apidata name="Utils" group="type" subgroup="class" />
+      <typedata visibility="public" serializable="false" layout="auto" format="ansi" />
+      <family>
+        <ancestors>
+          <type api="T:System.Object" ref="true" />
+        </ancestors>
+      </family>
+      <elements>
+        <element api="M:Zamasoft.CTI.Utils.SetConsoleMessageHander(Zamasoft.CTI.Session)" />
+        <element api="M:Zamasoft.CTI.Utils.SetErrorMessageHander(Zamasoft.CTI.Session)" />
+        <element api="M:Zamasoft.CTI.Utils.SetResultFile(Zamasoft.CTI.Session,System.String)" />
+        <element api="M:Zamasoft.CTI.Utils.SetResultStream(Zamasoft.CTI.Session,System.IO.Stream)" />
+        <element api="M:Zamasoft.CTI.Utils.SendResourceFile(Zamasoft.CTI.Session,System.String,System.String,System.String)" />
+        <element api="M:Zamasoft.CTI.Utils.SendResourceStream(Zamasoft.CTI.Session,System.IO.Stream,System.String,System.String,System.String)" />
+        <element api="M:Zamasoft.CTI.Utils.TranscodeFile(Zamasoft.CTI.Session,System.String,System.String,System.String)" />
+        <element api="M:Zamasoft.CTI.Utils.TranscodeStream(Zamasoft.CTI.Session,System.IO.Stream,System.String,System.String,System.String)" />
+        <element api="M:Zamasoft.CTI.Utils.#ctor" />
+        <element api="M:System.Object.ToString">
+          <apidata name="ToString" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <returns>
+            <type api="T:System.String" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.Equals(System.Object)">
+          <apidata name="Equals" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <parameters>
+            <parameter name="obj">
+              <type api="T:System.Object" ref="true" />
+            </parameter>
+          </parameters>
+          <returns>
+            <type api="T:System.Boolean" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.GetHashCode">
+          <apidata name="GetHashCode" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <returns>
+            <type api="T:System.Int32" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.GetType">
+          <apidata name="GetType" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="false" />
+          <returns>
+            <type api="T:System.Type" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.Finalize">
+          <apidata name="Finalize" group="member" subgroup="method" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="true" />
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.MemberwiseClone">
+          <apidata name="MemberwiseClone" group="member" subgroup="method" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="false" />
+          <returns>
+            <type api="T:System.Object" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+      </elements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Utils.#ctor">
+      <apidata name=".ctor" group="member" subgroup="constructor" />
+      <memberdata visibility="public" special="true" />
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Utils" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Utils.SendResourceFile(Zamasoft.CTI.Session,System.String,System.String,System.String)">
+      <apidata name="SendResourceFile" group="member" subgroup="method" />
+      <memberdata visibility="public" static="true" />
+      <proceduredata virtual="false" />
+      <parameters>
+        <parameter name="session">
+          <type api="T:Zamasoft.CTI.Session" ref="true" />
+        </parameter>
+        <parameter name="file">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+        <parameter name="mimeType">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+        <parameter name="encoding">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Utils" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Utils.SendResourceStream(Zamasoft.CTI.Session,System.IO.Stream,System.String,System.String,System.String)">
+      <apidata name="SendResourceStream" group="member" subgroup="method" />
+      <memberdata visibility="public" static="true" />
+      <proceduredata virtual="false" />
+      <parameters>
+        <parameter name="session">
+          <type api="T:Zamasoft.CTI.Session" ref="true" />
+        </parameter>
+        <parameter name="input">
+          <type api="T:System.IO.Stream" ref="true" />
+        </parameter>
+        <parameter name="uri">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+        <parameter name="mimeType">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+        <parameter name="encoding">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Utils" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Utils.SetConsoleMessageHander(Zamasoft.CTI.Session)">
+      <apidata name="SetConsoleMessageHander" group="member" subgroup="method" />
+      <memberdata visibility="public" static="true" />
+      <proceduredata virtual="false" />
+      <parameters>
+        <parameter name="session">
+          <type api="T:Zamasoft.CTI.Session" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Utils" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Utils.SetErrorMessageHander(Zamasoft.CTI.Session)">
+      <apidata name="SetErrorMessageHander" group="member" subgroup="method" />
+      <memberdata visibility="public" static="true" />
+      <proceduredata virtual="false" />
+      <parameters>
+        <parameter name="session">
+          <type api="T:Zamasoft.CTI.Session" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Utils" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Utils.SetResultFile(Zamasoft.CTI.Session,System.String)">
+      <apidata name="SetResultFile" group="member" subgroup="method" />
+      <memberdata visibility="public" static="true" />
+      <proceduredata virtual="false" />
+      <parameters>
+        <parameter name="session">
+          <type api="T:Zamasoft.CTI.Session" ref="true" />
+        </parameter>
+        <parameter name="file">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Utils" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Utils.SetResultStream(Zamasoft.CTI.Session,System.IO.Stream)">
+      <apidata name="SetResultStream" group="member" subgroup="method" />
+      <memberdata visibility="public" static="true" />
+      <proceduredata virtual="false" />
+      <parameters>
+        <parameter name="session">
+          <type api="T:Zamasoft.CTI.Session" ref="true" />
+        </parameter>
+        <parameter name="output">
+          <type api="T:System.IO.Stream" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Utils" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Utils.TranscodeFile(Zamasoft.CTI.Session,System.String,System.String,System.String)">
+      <apidata name="TranscodeFile" group="member" subgroup="method" />
+      <memberdata visibility="public" static="true" />
+      <proceduredata virtual="false" />
+      <parameters>
+        <parameter name="session">
+          <type api="T:Zamasoft.CTI.Session" ref="true" />
+        </parameter>
+        <parameter name="file">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+        <parameter name="mimeType">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+        <parameter name="encoding">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Utils" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Utils.TranscodeStream(Zamasoft.CTI.Session,System.IO.Stream,System.String,System.String,System.String)">
+      <apidata name="TranscodeStream" group="member" subgroup="method" />
+      <memberdata visibility="public" static="true" />
+      <proceduredata virtual="false" />
+      <parameters>
+        <parameter name="session">
+          <type api="T:Zamasoft.CTI.Session" ref="true" />
+        </parameter>
+        <parameter name="input">
+          <type api="T:System.IO.Stream" ref="true" />
+        </parameter>
+        <parameter name="uri">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+        <parameter name="mimeType">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+        <parameter name="encoding">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI" />
+        <type api="T:Zamasoft.CTI.Utils" ref="true" />
+      </containers>
+    </api>
+    <api id="N:Zamasoft.CTI.Message">
+      <apidata name="Zamasoft.CTI.Message" group="namespace" />
+      <elements>
+        <element api="T:Zamasoft.CTI.Message.MessageHandler" />
+      </elements>
+    </api>
+    <api id="T:Zamasoft.CTI.Message.MessageHandler">
+      <apidata name="MessageHandler" group="type" subgroup="interface" />
+      <typedata visibility="public" abstract="true" serializable="false" layout="auto" format="ansi" />
+      <elements>
+        <element api="M:Zamasoft.CTI.Message.MessageHandler.Message(System.Int16,System.String[],System.String)" />
+      </elements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Message" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Message.MessageHandler.Message(System.Int16,System.String[],System.String)">
+      <apidata name="Message" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <parameters>
+        <parameter name="code">
+          <type api="T:System.Int16" ref="false" />
+        </parameter>
+        <parameter name="args">
+          <arrayOf rank="1">
+            <type api="T:System.String" ref="true" />
+          </arrayOf>
+        </parameter>
+        <parameter name="mes">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Message" />
+        <type api="T:Zamasoft.CTI.Message.MessageHandler" ref="true" />
+      </containers>
+    </api>
+    <api id="N:Zamasoft.CTI.Progress">
+      <apidata name="Zamasoft.CTI.Progress" group="namespace" />
+      <elements>
+        <element api="T:Zamasoft.CTI.Progress.ProgressListener" />
+      </elements>
+    </api>
+    <api id="T:Zamasoft.CTI.Progress.ProgressListener">
+      <apidata name="ProgressListener" group="type" subgroup="interface" />
+      <typedata visibility="public" abstract="true" serializable="false" layout="auto" format="ansi" />
+      <elements>
+        <element api="M:Zamasoft.CTI.Progress.ProgressListener.SourceLength(System.Int64)" />
+        <element api="M:Zamasoft.CTI.Progress.ProgressListener.Progress(System.Int64)" />
+      </elements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Progress" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Progress.ProgressListener.Progress(System.Int64)">
+      <apidata name="Progress" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <parameters>
+        <parameter name="serverRead">
+          <type api="T:System.Int64" ref="false" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Progress" />
+        <type api="T:Zamasoft.CTI.Progress.ProgressListener" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Progress.ProgressListener.SourceLength(System.Int64)">
+      <apidata name="SourceLength" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <parameters>
+        <parameter name="sourceLength">
+          <type api="T:System.Int64" ref="false" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Progress" />
+        <type api="T:Zamasoft.CTI.Progress.ProgressListener" ref="true" />
+      </containers>
+    </api>
+    <api id="N:Zamasoft.CTI.Result">
+      <apidata name="Zamasoft.CTI.Result" group="namespace" />
+      <elements>
+        <element api="T:Zamasoft.CTI.Result.Results" />
+        <element api="T:Zamasoft.CTI.Result.FileResults" />
+        <element api="T:Zamasoft.CTI.Result.SingleResult" />
+        <element api="T:Zamasoft.CTI.Result.Builder" />
+        <element api="T:Zamasoft.CTI.Result.Builder.Block" />
+      </elements>
+    </api>
+    <api id="T:Zamasoft.CTI.Result.Builder">
+      <apidata name="Builder" group="type" subgroup="class" />
+      <typedata visibility="public" serializable="false" layout="auto" format="ansi" />
+      <family>
+        <ancestors>
+          <type api="T:System.Object" ref="true" />
+        </ancestors>
+      </family>
+      <elements>
+        <element api="F:Zamasoft.CTI.Result.Builder.raf" />
+        <element api="F:Zamasoft.CTI.Result.Builder.file" />
+        <element api="F:Zamasoft.CTI.Result.Builder.frgs" />
+        <element api="F:Zamasoft.CTI.Result.Builder.first" />
+        <element api="F:Zamasoft.CTI.Result.Builder.last" />
+        <element api="F:Zamasoft.CTI.Result.Builder.length" />
+        <element api="F:Zamasoft.CTI.Result.Builder.onMemory" />
+        <element api="F:Zamasoft.CTI.Result.Builder.segment" />
+        <element api="F:Zamasoft.CTI.Result.Builder.info" />
+        <element api="F:Zamasoft.CTI.Result.Builder.output" />
+        <element api="M:Zamasoft.CTI.Result.Builder.#ctor(System.IO.Stream)" />
+        <element api="M:Zamasoft.CTI.Result.Builder.#ctor(System.IO.Stream,System.Int32,System.Int32,System.Int32)" />
+        <element api="M:Zamasoft.CTI.Result.Builder.nextId" />
+        <element api="M:Zamasoft.CTI.Result.Builder.getBlock(System.Int32)" />
+        <element api="M:Zamasoft.CTI.Result.Builder.putBlock(System.Int32,Zamasoft.CTI.Result.Builder.Block)" />
+        <element api="M:Zamasoft.CTI.Result.Builder.AddBlock" />
+        <element api="M:Zamasoft.CTI.Result.Builder.InsertBlockBefore(System.Int32)" />
+        <element api="M:Zamasoft.CTI.Result.Builder.Write(System.Int32,System.Byte[],System.Int32,System.Int32)" />
+        <element api="M:Zamasoft.CTI.Result.Builder.Write(System.Byte[],System.Int32,System.Int32)" />
+        <element api="M:Zamasoft.CTI.Result.Builder.CloseBlock(System.Int32)" />
+        <element api="M:Zamasoft.CTI.Result.Builder.Finish" />
+        <element api="M:Zamasoft.CTI.Result.Builder.Dispose" />
+        <element api="P:Zamasoft.CTI.Result.Builder.Info" />
+        <element api="M:System.Object.ToString">
+          <apidata name="ToString" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <returns>
+            <type api="T:System.String" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.Equals(System.Object)">
+          <apidata name="Equals" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <parameters>
+            <parameter name="obj">
+              <type api="T:System.Object" ref="true" />
+            </parameter>
+          </parameters>
+          <returns>
+            <type api="T:System.Boolean" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.GetHashCode">
+          <apidata name="GetHashCode" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <returns>
+            <type api="T:System.Int32" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.GetType">
+          <apidata name="GetType" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="false" />
+          <returns>
+            <type api="T:System.Type" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.Finalize">
+          <apidata name="Finalize" group="member" subgroup="method" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="true" />
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.MemberwiseClone">
+          <apidata name="MemberwiseClone" group="member" subgroup="method" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="false" />
+          <returns>
+            <type api="T:System.Object" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+      </elements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Builder.#ctor(System.IO.Stream)">
+      <apidata name=".ctor" group="member" subgroup="constructor" />
+      <memberdata visibility="public" special="true" />
+      <parameters>
+        <parameter name="output">
+          <type api="T:System.IO.Stream" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Builder.#ctor(System.IO.Stream,System.Int32,System.Int32,System.Int32)">
+      <apidata name=".ctor" group="member" subgroup="constructor" />
+      <memberdata visibility="public" special="true" />
+      <parameters>
+        <parameter name="output">
+          <type api="T:System.IO.Stream" ref="true" />
+        </parameter>
+        <parameter name="fragmentBufferSize">
+          <type api="T:System.Int32" ref="false" />
+        </parameter>
+        <parameter name="totalBufferSize">
+          <type api="T:System.Int32" ref="false" />
+        </parameter>
+        <parameter name="threshold">
+          <type api="T:System.Int32" ref="false" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Builder.AddBlock">
+      <apidata name="AddBlock" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Builder.CloseBlock(System.Int32)">
+      <apidata name="CloseBlock" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <parameters>
+        <parameter name="id">
+          <type api="T:System.Int32" ref="false" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Builder.Dispose">
+      <apidata name="Dispose" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.Result.Builder.file">
+      <apidata name="file" group="member" subgroup="field" />
+      <memberdata visibility="family" />
+      <fielddata literal="false" initonly="false" serialized="true" />
+      <returns>
+        <type api="T:System.String" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Builder.Finish">
+      <apidata name="Finish" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="true" />
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.Result.Builder.first">
+      <apidata name="first" group="member" subgroup="field" />
+      <memberdata visibility="family" />
+      <fielddata literal="false" initonly="false" serialized="true" />
+      <returns>
+        <type api="T:Zamasoft.CTI.Result.Builder.Block" ref="true">
+          <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+        </type>
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.Result.Builder.frgs">
+      <apidata name="frgs" group="member" subgroup="field" />
+      <memberdata visibility="family" />
+      <fielddata literal="false" initonly="false" serialized="true" />
+      <returns>
+        <type api="T:System.Collections.Generic.List`1" ref="true">
+          <specialization>
+            <type api="T:Zamasoft.CTI.Result.Builder.Block" ref="true">
+              <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+            </type>
+          </specialization>
+        </type>
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Builder.getBlock(System.Int32)">
+      <apidata name="getBlock" group="member" subgroup="method" />
+      <memberdata visibility="family" />
+      <proceduredata virtual="false" />
+      <parameters>
+        <parameter name="id">
+          <type api="T:System.Int32" ref="false" />
+        </parameter>
+      </parameters>
+      <returns>
+        <type api="T:Zamasoft.CTI.Result.Builder.Block" ref="true">
+          <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+        </type>
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.Result.Builder.info">
+      <apidata name="info" group="member" subgroup="field" />
+      <memberdata visibility="family" />
+      <fielddata literal="false" initonly="false" serialized="true" />
+      <returns>
+        <type api="T:Zamasoft.CTI.Source.SourceInfo" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="P:Zamasoft.CTI.Result.Builder.Info">
+      <apidata name="Info" group="member" subgroup="property" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <propertydata get="true" set="true" />
+      <getter name="get_Info" />
+      <setter name="set_Info" />
+      <returns>
+        <type api="T:Zamasoft.CTI.Source.SourceInfo" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Builder.InsertBlockBefore(System.Int32)">
+      <apidata name="InsertBlockBefore" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <parameters>
+        <parameter name="anchorId">
+          <type api="T:System.Int32" ref="false" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.Result.Builder.last">
+      <apidata name="last" group="member" subgroup="field" />
+      <memberdata visibility="family" />
+      <fielddata literal="false" initonly="false" serialized="true" />
+      <returns>
+        <type api="T:Zamasoft.CTI.Result.Builder.Block" ref="true">
+          <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+        </type>
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.Result.Builder.length">
+      <apidata name="length" group="member" subgroup="field" />
+      <memberdata visibility="family" />
+      <fielddata literal="false" initonly="false" serialized="true" />
+      <returns>
+        <type api="T:System.Int64" ref="false" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Builder.nextId">
+      <apidata name="nextId" group="member" subgroup="method" />
+      <memberdata visibility="family" />
+      <proceduredata virtual="false" />
+      <returns>
+        <type api="T:System.Int32" ref="false" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.Result.Builder.onMemory">
+      <apidata name="onMemory" group="member" subgroup="field" />
+      <memberdata visibility="family" />
+      <fielddata literal="false" initonly="false" serialized="true" />
+      <returns>
+        <type api="T:System.Int64" ref="false" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.Result.Builder.output">
+      <apidata name="output" group="member" subgroup="field" />
+      <memberdata visibility="family" />
+      <fielddata literal="false" initonly="true" serialized="true" />
+      <returns>
+        <type api="T:System.IO.Stream" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Builder.putBlock(System.Int32,Zamasoft.CTI.Result.Builder.Block)">
+      <apidata name="putBlock" group="member" subgroup="method" />
+      <memberdata visibility="family" />
+      <proceduredata virtual="false" />
+      <parameters>
+        <parameter name="id">
+          <type api="T:System.Int32" ref="false" />
+        </parameter>
+        <parameter name="frg">
+          <type api="T:Zamasoft.CTI.Result.Builder.Block" ref="true">
+            <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+          </type>
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.Result.Builder.raf">
+      <apidata name="raf" group="member" subgroup="field" />
+      <memberdata visibility="family" />
+      <fielddata literal="false" initonly="false" serialized="true" />
+      <returns>
+        <type api="T:System.IO.Stream" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.Result.Builder.segment">
+      <apidata name="segment" group="member" subgroup="field" />
+      <memberdata visibility="family" />
+      <fielddata literal="false" initonly="false" serialized="true" />
+      <returns>
+        <type api="T:System.Int32" ref="false" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Builder.Write(System.Byte[],System.Int32,System.Int32)">
+      <apidata name="Write" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <parameters>
+        <parameter name="b">
+          <arrayOf rank="1">
+            <type api="T:System.Byte" ref="false" />
+          </arrayOf>
+        </parameter>
+        <parameter name="off">
+          <type api="T:System.Int32" ref="false" />
+        </parameter>
+        <parameter name="len">
+          <type api="T:System.Int32" ref="false" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Builder.Write(System.Int32,System.Byte[],System.Int32,System.Int32)">
+      <apidata name="Write" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <parameters>
+        <parameter name="id">
+          <type api="T:System.Int32" ref="false" />
+        </parameter>
+        <parameter name="b">
+          <arrayOf rank="1">
+            <type api="T:System.Byte" ref="false" />
+          </arrayOf>
+        </parameter>
+        <parameter name="off">
+          <type api="T:System.Int32" ref="false" />
+        </parameter>
+        <parameter name="len">
+          <type api="T:System.Int32" ref="false" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="T:Zamasoft.CTI.Result.Builder.Block">
+      <apidata name="Block" group="type" subgroup="class" />
+      <typedata visibility="family" serializable="false" layout="auto" format="ansi" />
+      <family>
+        <ancestors>
+          <type api="T:System.Object" ref="true" />
+        </ancestors>
+      </family>
+      <elements>
+        <element api="F:Zamasoft.CTI.Result.Builder.Block.prev" />
+        <element api="F:Zamasoft.CTI.Result.Builder.Block.next" />
+        <element api="M:Zamasoft.CTI.Result.Builder.Block.#ctor(Zamasoft.CTI.Result.Builder,System.Int32)" />
+        <element api="M:Zamasoft.CTI.Result.Builder.Block.getId" />
+        <element api="M:Zamasoft.CTI.Result.Builder.Block.getLength" />
+        <element api="M:Zamasoft.CTI.Result.Builder.Block.write(System.Byte[],System.Int32,System.Int32)" />
+        <element api="M:Zamasoft.CTI.Result.Builder.Block.close" />
+        <element api="M:Zamasoft.CTI.Result.Builder.Block.writeTo(System.IO.Stream)" />
+        <element api="M:Zamasoft.CTI.Result.Builder.Block.dispose" />
+        <element api="M:System.Object.ToString">
+          <apidata name="ToString" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <returns>
+            <type api="T:System.String" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.Equals(System.Object)">
+          <apidata name="Equals" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <parameters>
+            <parameter name="obj">
+              <type api="T:System.Object" ref="true" />
+            </parameter>
+          </parameters>
+          <returns>
+            <type api="T:System.Boolean" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.GetHashCode">
+          <apidata name="GetHashCode" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <returns>
+            <type api="T:System.Int32" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.GetType">
+          <apidata name="GetType" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="false" />
+          <returns>
+            <type api="T:System.Type" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.Finalize">
+          <apidata name="Finalize" group="member" subgroup="method" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="true" />
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.MemberwiseClone">
+          <apidata name="MemberwiseClone" group="member" subgroup="method" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="false" />
+          <returns>
+            <type api="T:System.Object" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+      </elements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Builder.Block.#ctor(Zamasoft.CTI.Result.Builder,System.Int32)">
+      <apidata name=".ctor" group="member" subgroup="constructor" />
+      <memberdata visibility="public" special="true" />
+      <parameters>
+        <parameter name="builder">
+          <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+        </parameter>
+        <parameter name="id">
+          <type api="T:System.Int32" ref="false" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder.Block" ref="true">
+          <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+        </type>
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Builder.Block.close">
+      <apidata name="close" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder.Block" ref="true">
+          <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+        </type>
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Builder.Block.dispose">
+      <apidata name="dispose" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder.Block" ref="true">
+          <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+        </type>
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Builder.Block.getId">
+      <apidata name="getId" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <returns>
+        <type api="T:System.Int32" ref="false" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder.Block" ref="true">
+          <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+        </type>
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Builder.Block.getLength">
+      <apidata name="getLength" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <returns>
+        <type api="T:System.Int32" ref="false" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder.Block" ref="true">
+          <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+        </type>
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.Result.Builder.Block.next">
+      <apidata name="next" group="member" subgroup="field" />
+      <memberdata visibility="public" />
+      <fielddata literal="false" initonly="false" serialized="true" />
+      <returns>
+        <type api="T:Zamasoft.CTI.Result.Builder.Block" ref="true">
+          <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+        </type>
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder.Block" ref="true">
+          <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+        </type>
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.Result.Builder.Block.prev">
+      <apidata name="prev" group="member" subgroup="field" />
+      <memberdata visibility="public" />
+      <fielddata literal="false" initonly="false" serialized="true" />
+      <returns>
+        <type api="T:Zamasoft.CTI.Result.Builder.Block" ref="true">
+          <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+        </type>
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder.Block" ref="true">
+          <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+        </type>
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Builder.Block.write(System.Byte[],System.Int32,System.Int32)">
+      <apidata name="write" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <parameters>
+        <parameter name="buff">
+          <arrayOf rank="1">
+            <type api="T:System.Byte" ref="false" />
+          </arrayOf>
+        </parameter>
+        <parameter name="pos">
+          <type api="T:System.Int32" ref="false" />
+        </parameter>
+        <parameter name="len">
+          <type api="T:System.Int32" ref="false" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder.Block" ref="true">
+          <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+        </type>
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Builder.Block.writeTo(System.IO.Stream)">
+      <apidata name="writeTo" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <parameters>
+        <parameter name="output">
+          <type api="T:System.IO.Stream" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Builder.Block" ref="true">
+          <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+        </type>
+      </containers>
+    </api>
+    <api id="T:Zamasoft.CTI.Result.FileResults">
+      <apidata name="FileResults" group="type" subgroup="class" />
+      <typedata visibility="public" serializable="false" layout="auto" format="ansi" />
+      <family>
+        <ancestors>
+          <type api="T:System.Object" ref="true" />
+        </ancestors>
+      </family>
+      <implements>
+        <type api="T:Zamasoft.CTI.Result.Results" ref="true" />
+      </implements>
+      <elements>
+        <element api="F:Zamasoft.CTI.Result.FileResults.prefix" />
+        <element api="F:Zamasoft.CTI.Result.FileResults.suffix" />
+        <element api="F:Zamasoft.CTI.Result.FileResults.counter" />
+        <element api="M:Zamasoft.CTI.Result.FileResults.#ctor(System.String,System.String)" />
+        <element api="M:Zamasoft.CTI.Result.FileResults.HasNext" />
+        <element api="M:Zamasoft.CTI.Result.FileResults.NextBuilder(Zamasoft.CTI.Source.SourceInfo)" />
+        <element api="M:Zamasoft.CTI.Result.FileResults.End" />
+        <element api="M:System.Object.ToString">
+          <apidata name="ToString" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <returns>
+            <type api="T:System.String" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.Equals(System.Object)">
+          <apidata name="Equals" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <parameters>
+            <parameter name="obj">
+              <type api="T:System.Object" ref="true" />
+            </parameter>
+          </parameters>
+          <returns>
+            <type api="T:System.Boolean" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.GetHashCode">
+          <apidata name="GetHashCode" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <returns>
+            <type api="T:System.Int32" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.GetType">
+          <apidata name="GetType" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="false" />
+          <returns>
+            <type api="T:System.Type" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.Finalize">
+          <apidata name="Finalize" group="member" subgroup="method" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="true" />
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.MemberwiseClone">
+          <apidata name="MemberwiseClone" group="member" subgroup="method" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="false" />
+          <returns>
+            <type api="T:System.Object" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+      </elements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.FileResults.#ctor(System.String,System.String)">
+      <apidata name=".ctor" group="member" subgroup="constructor" />
+      <memberdata visibility="public" special="true" />
+      <parameters>
+        <parameter name="prefix">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+        <parameter name="suffix">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.FileResults" ref="true" />
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.Result.FileResults.counter">
+      <apidata name="counter" group="member" subgroup="field" />
+      <memberdata visibility="family" />
+      <fielddata literal="false" initonly="false" serialized="true" />
+      <returns>
+        <type api="T:System.Int32" ref="false" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.FileResults" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.FileResults.End">
+      <apidata name="End" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="true" final="true" />
+      <implements>
+        <member api="M:Zamasoft.CTI.Result.Results.End">
+          <type api="T:Zamasoft.CTI.Result.Results" ref="true" />
+        </member>
+      </implements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.FileResults" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.FileResults.HasNext">
+      <apidata name="HasNext" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="true" final="true" />
+      <returns>
+        <type api="T:System.Boolean" ref="false" />
+      </returns>
+      <implements>
+        <member api="M:Zamasoft.CTI.Result.Results.HasNext">
+          <type api="T:Zamasoft.CTI.Result.Results" ref="true" />
+        </member>
+      </implements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.FileResults" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.FileResults.NextBuilder(Zamasoft.CTI.Source.SourceInfo)">
+      <apidata name="NextBuilder" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="true" final="true" />
+      <parameters>
+        <parameter name="info">
+          <type api="T:Zamasoft.CTI.Source.SourceInfo" ref="true" />
+        </parameter>
+      </parameters>
+      <returns>
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </returns>
+      <implements>
+        <member api="M:Zamasoft.CTI.Result.Results.NextBuilder(Zamasoft.CTI.Source.SourceInfo)">
+          <type api="T:Zamasoft.CTI.Result.Results" ref="true" />
+        </member>
+      </implements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.FileResults" ref="true" />
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.Result.FileResults.prefix">
+      <apidata name="prefix" group="member" subgroup="field" />
+      <memberdata visibility="family" />
+      <fielddata literal="false" initonly="true" serialized="true" />
+      <returns>
+        <type api="T:System.String" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.FileResults" ref="true" />
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.Result.FileResults.suffix">
+      <apidata name="suffix" group="member" subgroup="field" />
+      <memberdata visibility="family" />
+      <fielddata literal="false" initonly="true" serialized="true" />
+      <returns>
+        <type api="T:System.String" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.FileResults" ref="true" />
+      </containers>
+    </api>
+    <api id="T:Zamasoft.CTI.Result.Results">
+      <apidata name="Results" group="type" subgroup="interface" />
+      <typedata visibility="public" abstract="true" serializable="false" layout="auto" format="ansi" />
+      <implementors>
+        <type api="T:Zamasoft.CTI.Result.FileResults" ref="true" />
+        <type api="T:Zamasoft.CTI.Result.SingleResult" ref="true" />
+      </implementors>
+      <elements>
+        <element api="M:Zamasoft.CTI.Result.Results.HasNext" />
+        <element api="M:Zamasoft.CTI.Result.Results.NextBuilder(Zamasoft.CTI.Source.SourceInfo)" />
+        <element api="M:Zamasoft.CTI.Result.Results.End" />
+      </elements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Results.End">
+      <apidata name="End" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Results" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Results.HasNext">
+      <apidata name="HasNext" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <returns>
+        <type api="T:System.Boolean" ref="false" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Results" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.Results.NextBuilder(Zamasoft.CTI.Source.SourceInfo)">
+      <apidata name="NextBuilder" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <parameters>
+        <parameter name="info">
+          <type api="T:Zamasoft.CTI.Source.SourceInfo" ref="true" />
+        </parameter>
+      </parameters>
+      <returns>
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.Results" ref="true" />
+      </containers>
+    </api>
+    <api id="T:Zamasoft.CTI.Result.SingleResult">
+      <apidata name="SingleResult" group="type" subgroup="class" />
+      <typedata visibility="public" serializable="false" layout="auto" format="ansi" />
+      <family>
+        <ancestors>
+          <type api="T:System.Object" ref="true" />
+        </ancestors>
+      </family>
+      <implements>
+        <type api="T:Zamasoft.CTI.Result.Results" ref="true" />
+      </implements>
+      <elements>
+        <element api="F:Zamasoft.CTI.Result.SingleResult.builder" />
+        <element api="F:Zamasoft.CTI.Result.SingleResult.file" />
+        <element api="M:Zamasoft.CTI.Result.SingleResult.#ctor(Zamasoft.CTI.Result.Builder)" />
+        <element api="M:Zamasoft.CTI.Result.SingleResult.#ctor(System.IO.Stream)" />
+        <element api="M:Zamasoft.CTI.Result.SingleResult.#ctor(System.String)" />
+        <element api="M:Zamasoft.CTI.Result.SingleResult.HasNext" />
+        <element api="M:Zamasoft.CTI.Result.SingleResult.NextBuilder(Zamasoft.CTI.Source.SourceInfo)" />
+        <element api="M:Zamasoft.CTI.Result.SingleResult.End" />
+        <element api="M:System.Object.ToString">
+          <apidata name="ToString" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <returns>
+            <type api="T:System.String" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.Equals(System.Object)">
+          <apidata name="Equals" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <parameters>
+            <parameter name="obj">
+              <type api="T:System.Object" ref="true" />
+            </parameter>
+          </parameters>
+          <returns>
+            <type api="T:System.Boolean" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.GetHashCode">
+          <apidata name="GetHashCode" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <returns>
+            <type api="T:System.Int32" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.GetType">
+          <apidata name="GetType" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="false" />
+          <returns>
+            <type api="T:System.Type" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.Finalize">
+          <apidata name="Finalize" group="member" subgroup="method" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="true" />
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.MemberwiseClone">
+          <apidata name="MemberwiseClone" group="member" subgroup="method" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="false" />
+          <returns>
+            <type api="T:System.Object" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+      </elements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.SingleResult.#ctor(System.IO.Stream)">
+      <apidata name=".ctor" group="member" subgroup="constructor" />
+      <memberdata visibility="public" special="true" />
+      <parameters>
+        <parameter name="output">
+          <type api="T:System.IO.Stream" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.SingleResult" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.SingleResult.#ctor(System.String)">
+      <apidata name=".ctor" group="member" subgroup="constructor" />
+      <memberdata visibility="public" special="true" />
+      <parameters>
+        <parameter name="file">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.SingleResult" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.SingleResult.#ctor(Zamasoft.CTI.Result.Builder)">
+      <apidata name=".ctor" group="member" subgroup="constructor" />
+      <memberdata visibility="public" special="true" />
+      <parameters>
+        <parameter name="builder">
+          <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.SingleResult" ref="true" />
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.Result.SingleResult.builder">
+      <apidata name="builder" group="member" subgroup="field" />
+      <memberdata visibility="family" />
+      <fielddata literal="false" initonly="false" serialized="true" />
+      <returns>
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.SingleResult" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.SingleResult.End">
+      <apidata name="End" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="true" final="true" />
+      <implements>
+        <member api="M:Zamasoft.CTI.Result.Results.End">
+          <type api="T:Zamasoft.CTI.Result.Results" ref="true" />
+        </member>
+      </implements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.SingleResult" ref="true" />
+      </containers>
+    </api>
+    <api id="F:Zamasoft.CTI.Result.SingleResult.file">
+      <apidata name="file" group="member" subgroup="field" />
+      <memberdata visibility="family" />
+      <fielddata literal="false" initonly="false" serialized="true" />
+      <returns>
+        <type api="T:System.String" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.SingleResult" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.SingleResult.HasNext">
+      <apidata name="HasNext" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="true" final="true" />
+      <returns>
+        <type api="T:System.Boolean" ref="false" />
+      </returns>
+      <implements>
+        <member api="M:Zamasoft.CTI.Result.Results.HasNext">
+          <type api="T:Zamasoft.CTI.Result.Results" ref="true" />
+        </member>
+      </implements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.SingleResult" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Result.SingleResult.NextBuilder(Zamasoft.CTI.Source.SourceInfo)">
+      <apidata name="NextBuilder" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="true" final="true" />
+      <parameters>
+        <parameter name="info">
+          <type api="T:Zamasoft.CTI.Source.SourceInfo" ref="true" />
+        </parameter>
+      </parameters>
+      <returns>
+        <type api="T:Zamasoft.CTI.Result.Builder" ref="true" />
+      </returns>
+      <implements>
+        <member api="M:Zamasoft.CTI.Result.Results.NextBuilder(Zamasoft.CTI.Source.SourceInfo)">
+          <type api="T:Zamasoft.CTI.Result.Results" ref="true" />
+        </member>
+      </implements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Result" />
+        <type api="T:Zamasoft.CTI.Result.SingleResult" ref="true" />
+      </containers>
+    </api>
+    <api id="N:Zamasoft.CTI.Source">
+      <apidata name="Zamasoft.CTI.Source" group="namespace" />
+      <elements>
+        <element api="T:Zamasoft.CTI.Source.SourceResolver" />
+        <element api="T:Zamasoft.CTI.Source.SourceInfo" />
+      </elements>
+    </api>
+    <api id="T:Zamasoft.CTI.Source.SourceInfo">
+      <apidata name="SourceInfo" group="type" subgroup="class" />
+      <typedata visibility="public" serializable="false" layout="auto" format="ansi" />
+      <family>
+        <ancestors>
+          <type api="T:System.Object" ref="true" />
+        </ancestors>
+      </family>
+      <elements>
+        <element api="M:Zamasoft.CTI.Source.SourceInfo.#ctor(System.String,System.String,System.String,System.Int64)" />
+        <element api="M:Zamasoft.CTI.Source.SourceInfo.#ctor(System.String,System.String,System.String)" />
+        <element api="M:Zamasoft.CTI.Source.SourceInfo.#ctor(System.String,System.String)" />
+        <element api="M:Zamasoft.CTI.Source.SourceInfo.#ctor(System.String)" />
+        <element api="P:Zamasoft.CTI.Source.SourceInfo.Uri" />
+        <element api="P:Zamasoft.CTI.Source.SourceInfo.MimeType" />
+        <element api="P:Zamasoft.CTI.Source.SourceInfo.Encoding" />
+        <element api="P:Zamasoft.CTI.Source.SourceInfo.Length" />
+        <element api="M:System.Object.ToString">
+          <apidata name="ToString" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <returns>
+            <type api="T:System.String" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.Equals(System.Object)">
+          <apidata name="Equals" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <parameters>
+            <parameter name="obj">
+              <type api="T:System.Object" ref="true" />
+            </parameter>
+          </parameters>
+          <returns>
+            <type api="T:System.Boolean" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.GetHashCode">
+          <apidata name="GetHashCode" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="true" />
+          <returns>
+            <type api="T:System.Int32" ref="false" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.GetType">
+          <apidata name="GetType" group="member" subgroup="method" />
+          <memberdata visibility="public" />
+          <proceduredata virtual="false" />
+          <returns>
+            <type api="T:System.Type" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.Finalize">
+          <apidata name="Finalize" group="member" subgroup="method" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="true" />
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+        <element api="M:System.Object.MemberwiseClone">
+          <apidata name="MemberwiseClone" group="member" subgroup="method" />
+          <memberdata visibility="family" />
+          <proceduredata virtual="false" />
+          <returns>
+            <type api="T:System.Object" ref="true" />
+          </returns>
+          <containers>
+            <library assembly="mscorlib" module="mscorlib" kind="DynamicallyLinkedLibrary" />
+            <namespace api="N:System" />
+            <type api="T:System.Object" ref="true" />
+          </containers>
+        </element>
+      </elements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Source" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Source.SourceInfo.#ctor(System.String)">
+      <apidata name=".ctor" group="member" subgroup="constructor" />
+      <memberdata visibility="public" special="true" />
+      <parameters>
+        <parameter name="uri">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Source" />
+        <type api="T:Zamasoft.CTI.Source.SourceInfo" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Source.SourceInfo.#ctor(System.String,System.String)">
+      <apidata name=".ctor" group="member" subgroup="constructor" />
+      <memberdata visibility="public" special="true" />
+      <parameters>
+        <parameter name="uri">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+        <parameter name="mimeType">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Source" />
+        <type api="T:Zamasoft.CTI.Source.SourceInfo" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Source.SourceInfo.#ctor(System.String,System.String,System.String)">
+      <apidata name=".ctor" group="member" subgroup="constructor" />
+      <memberdata visibility="public" special="true" />
+      <parameters>
+        <parameter name="uri">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+        <parameter name="mimeType">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+        <parameter name="encoding">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Source" />
+        <type api="T:Zamasoft.CTI.Source.SourceInfo" ref="true" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Source.SourceInfo.#ctor(System.String,System.String,System.String,System.Int64)">
+      <apidata name=".ctor" group="member" subgroup="constructor" />
+      <memberdata visibility="public" special="true" />
+      <parameters>
+        <parameter name="uri">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+        <parameter name="mimeType">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+        <parameter name="encoding">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+        <parameter name="length">
+          <type api="T:System.Int64" ref="false" />
+        </parameter>
+      </parameters>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Source" />
+        <type api="T:Zamasoft.CTI.Source.SourceInfo" ref="true" />
+      </containers>
+    </api>
+    <api id="P:Zamasoft.CTI.Source.SourceInfo.Encoding">
+      <apidata name="Encoding" group="member" subgroup="property" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <propertydata get="true" set="true" />
+      <getter name="get_Encoding" />
+      <setter name="set_Encoding" />
+      <returns>
+        <type api="T:System.String" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Source" />
+        <type api="T:Zamasoft.CTI.Source.SourceInfo" ref="true" />
+      </containers>
+    </api>
+    <api id="P:Zamasoft.CTI.Source.SourceInfo.Length">
+      <apidata name="Length" group="member" subgroup="property" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <propertydata get="true" set="true" />
+      <getter name="get_Length" />
+      <setter name="set_Length" />
+      <returns>
+        <type api="T:System.Int64" ref="false" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Source" />
+        <type api="T:Zamasoft.CTI.Source.SourceInfo" ref="true" />
+      </containers>
+    </api>
+    <api id="P:Zamasoft.CTI.Source.SourceInfo.MimeType">
+      <apidata name="MimeType" group="member" subgroup="property" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <propertydata get="true" set="true" />
+      <getter name="get_MimeType" />
+      <setter name="set_MimeType" />
+      <returns>
+        <type api="T:System.String" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Source" />
+        <type api="T:Zamasoft.CTI.Source.SourceInfo" ref="true" />
+      </containers>
+    </api>
+    <api id="P:Zamasoft.CTI.Source.SourceInfo.Uri">
+      <apidata name="Uri" group="member" subgroup="property" />
+      <memberdata visibility="public" />
+      <proceduredata virtual="false" />
+      <propertydata get="true" set="true" />
+      <getter name="get_Uri" />
+      <setter name="set_Uri" />
+      <returns>
+        <type api="T:System.String" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Source" />
+        <type api="T:Zamasoft.CTI.Source.SourceInfo" ref="true" />
+      </containers>
+    </api>
+    <api id="T:Zamasoft.CTI.Source.SourceResolver">
+      <apidata name="SourceResolver" group="type" subgroup="interface" />
+      <typedata visibility="public" abstract="true" serializable="false" layout="auto" format="ansi" />
+      <elements>
+        <element api="M:Zamasoft.CTI.Source.SourceResolver.Resolve(System.String,Zamasoft.CTI.Source.SourceInfo@)" />
+      </elements>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Source" />
+      </containers>
+    </api>
+    <api id="M:Zamasoft.CTI.Source.SourceResolver.Resolve(System.String,Zamasoft.CTI.Source.SourceInfo@)">
+      <apidata name="Resolve" group="member" subgroup="method" />
+      <memberdata visibility="public" />
+      <proceduredata abstract="true" virtual="true" />
+      <parameters>
+        <parameter name="uri">
+          <type api="T:System.String" ref="true" />
+        </parameter>
+        <parameter name="info">
+          <referenceTo>
+            <type api="T:Zamasoft.CTI.Source.SourceInfo" ref="true" />
+          </referenceTo>
+        </parameter>
+      </parameters>
+      <returns>
+        <type api="T:System.IO.Stream" ref="true" />
+      </returns>
+      <containers>
+        <library assembly="CTI" module="CTI" kind="DynamicallyLinkedLibrary" />
+        <namespace api="N:Zamasoft.CTI.Source" />
+        <type api="T:Zamasoft.CTI.Source.SourceResolver" ref="true" />
+      </containers>
+    </api>
+  </apis>
+</reflection>

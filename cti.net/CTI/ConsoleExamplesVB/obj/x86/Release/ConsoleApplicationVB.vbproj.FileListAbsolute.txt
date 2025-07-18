@@ -1,0 +1,13 @@
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleApplicationVB\bin\Release\ConsoleApplicationVB.exe
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleApplicationVB\bin\Release\ConsoleApplicationVB.pdb
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleApplicationVB\bin\Release\ConsoleApplicationVB.xml
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleApplicationVB\bin\Release\CTI.dll
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleApplicationVB\bin\Release\CTI.pdb
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleApplicationVB\bin\Release\CTI.xml
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleApplicationVB\obj\x86\Release\ResolveAssemblyReference.cache
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleApplicationVB\obj\x86\Release\ConsoleApplicationVB.Resources.resources
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleApplicationVB\obj\x86\Release\GenerateResource.read.1.tlog
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleApplicationVB\obj\x86\Release\GenerateResource.write.1.tlog
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleApplicationVB\obj\x86\Release\ConsoleApplicationVB.exe
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleApplicationVB\obj\x86\Release\ConsoleApplicationVB.xml
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleApplicationVB\obj\x86\Release\ConsoleApplicationVB.pdb

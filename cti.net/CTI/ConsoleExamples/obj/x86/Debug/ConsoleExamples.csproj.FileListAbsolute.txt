@@ -1,0 +1,9 @@
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamples\bin\Debug\files\test.css
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamples\bin\Debug\files\test.html
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamples\bin\Debug\ConsoleExamples.exe
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamples\bin\Debug\ConsoleExamples.pdb
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamples\bin\Debug\CTI.dll
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamples\bin\Debug\CTI.pdb
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamples\obj\x86\Debug\ConsoleExamples.csprojResolveAssemblyReference.cache
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamples\obj\x86\Debug\ConsoleExamples.exe
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamples\obj\x86\Debug\ConsoleExamples.pdb

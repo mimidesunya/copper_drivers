@@ -1,0 +1,12 @@
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamplesVB\bin\WebExamplesVB.dll.config
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamplesVB\bin\WebExamplesVB.dll
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamplesVB\bin\WebExamplesVB.pdb
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamplesVB\bin\WebExamplesVB.xml
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamplesVB\bin\CTI.dll
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamplesVB\bin\CTI.pdb
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamplesVB\obj\Debug\WebExamplesVB.vbprojResolveAssemblyReference.cache
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamplesVB\obj\Debug\WebExamplesVB.Resources.resources
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamplesVB\obj\Debug\WebExamplesVB.vbproj.GenerateResource.Cache
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamplesVB\obj\Debug\WebExamplesVB.dll
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamplesVB\obj\Debug\WebExamplesVB.xml
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamplesVB\obj\Debug\WebExamplesVB.pdb

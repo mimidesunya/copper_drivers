@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ConsoleApplicationVB
+</name>
+</assembly>
+<members>
+<member name="T:ConsoleApplicationVB.ServerInfo">
+	<summary>
+ Copper PDF の情報を取得して表示します。
+ </summary>
+</member><member name="P:ConsoleApplicationVB.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:ConsoleApplicationVB.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:ConsoleApplicationVB.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

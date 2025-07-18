@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project default="make">
+	<property name="version" value="3.0.0" />
+	<property name="aversion" value="3_0_0" />
+	<property name="archive" value="build/cti-python-${aversion}" />
+	<property name="dirname" value="cti-python-${version}" />
+	<property name="encoding" value="UTF-8" />
+	<property name="build.dir" location="build/python" />
+	<property name="build.apidoc.dir" location="${build.dir}/apidoc" />
+	<property name="src.dir" location="src" />
+
+	<target name="clean">
+		<delete dir="build" />
+	</target>
+	
+	<target name="release" depends="clean,make"/>
+	
+	<target name="dist" depends="release">
+		<zip destfile="${archive}.zip">
+		  	<zipfileset dir="${build.dir}" prefix="${dirname}"/>
+		</zip>
+		<tar tarfile="${archive}.tar">
+		  	<tarfileset dir="${build.dir}" prefix="${dirname}"/>
+		</tar>
+		<gzip zipfile="${archive}.tar.gz" src="${archive}.tar"/>
+	</target>
+	
+	<target name="make" depends="doc">
+		<filter token="version" value="${version}" />
+		<copy todir="${build.dir}" filtering="true" encoding="${encoding}">
+			<fileset dir="." includes="README.txt"/>
+		</copy>
+		
+		<copy todir="${build.dir}">
+			<fileset dir="src" includes="**" excludes="test/out"/>
+		</copy>
+	</target>
+
+	<target name="doc">
+		<delete dir="${build.apidoc.dir}"/>
+		<exec dir="${src.dir}/code" executable="pydoc3">
+			<arg line="-w"/>
+			<arg value="cti"/>
+			<arg value="cti.builder"/>
+			<arg value="cti.ctip2"/>
+			<arg value="cti.driver"/>
+			<arg value="cti.results"/>
+			<arg value="cti.session"/>
+		</exec>
+		<move todir="${build.apidoc.dir}">
+			<fileset dir="${src.dir}/code" includes="*.html"/>
+		</move>
+	</target>
+	
+	<target name="rpm">
+		<buildnumber/>
+		<delete dir="build/work"/>
+		<filter token="version.number" value="${version}"/>
+		<filter token="aversion.number" value="${aversion}"/>
+		<filter token="build.number" value="${build.number}"/>
+		<mkdir dir="build/work/rpm/BUILD" />
+		<mkdir dir="build/work/rpm/RPMS" />
+		<mkdir dir="build/work/rpm/SOURCES" />
+		<mkdir dir="build/work/rpm/SPECS" />
+		<mkdir dir="build/work/rpm/SRPMS" />
+		<copy file="${spec}" filtering="true" tofile="build/work/rpm/SPECS/cti-python.spec" />
+		<copy file="${archive}.tar.gz" todir="build/work/rpm/SOURCES" />
+		<rpm specfile="cti-python.spec" topdir="build/work/rpm" command="-bb --target noarch" />
+		<copy todir="build">
+			<fileset dir="build/work/rpm/RPMS/noarch" includes="*" />
+		</copy>
+	</target>
+	
+	<target name="deb">
+		<antcall target="rpm">
+		  	<param name="spec" value="src/rpm/cti-python.deb.spec" />
+		</antcall>
+		<exec dir="build" executable="fakeroot">
+			<arg value="alien" />
+			<arg value="-d" /><!-- .debパッケージへ -->
+			<arg value="-c" /><!-- 追加/削除スクリプトを含む -->
+			<arg value="cti-python-${version}-0.noarch.rpm" />
+		</exec>
+		<delete file="build/cti-python-${version}-0.noarch.rpm"/>
+	</target>
+	
+	<target name="redhat">
+		<antcall target="rpm">
+		  	<param name="spec" value="src/rpm/cti-python.redhat8.spec" />
+		</antcall>
+		<move file="build/cti-python-${version}-0.noarch.rpm" tofile="build/cti-python-rh8-${version}-0.noarch.rpm"/>
+		<antcall target="rpm">
+		  	<param name="spec" value="src/rpm/cti-python.redhat9.spec" />
+		</antcall>
+		<move file="build/cti-python-${version}-0.noarch.rpm" tofile="build/cti-python-rh9-${version}-0.noarch.rpm"/>
+	</target>
+	
+	<target name="package" depends="dist,deb,redhat"/>
+</project>

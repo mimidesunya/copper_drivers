@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topics>
+  <topic id="N:Zamasoft.CTI" file="545a1947-b074-f078-68fc-67c3365c458c">
+    <topic id="T:Zamasoft.CTI.AbortMode" file="8b0c91f6-1e44-17a4-6fe6-29c24bf555de" />
+    <topic id="T:Zamasoft.CTI.Driver" file="de4e19d7-f4be-8fa5-5178-6e3fe3f452fe">
+      <topic id="M:Zamasoft.CTI.Driver.getSession(System.Uri,System.Collections.Hashtable)" file="9693350f-ecfc-ba22-2c31-1a16377ebfd4" />
+    </topic>
+    <topic id="T:Zamasoft.CTI.DriverManager" file="ed8793d6-77aa-4b8e-3a99-ee1022536d8f">
+      <topic id="M:Zamasoft.CTI.DriverManager.#ctor" file="bf511e97-08cb-568f-196b-b781ff6db992" />
+      <topic id="M:Zamasoft.CTI.DriverManager.getDriver(System.Uri)" file="dab39cd7-f2df-90e3-0c0b-f42b8664218c" />
+      <topic id="M:Zamasoft.CTI.DriverManager.getSession(System.Uri,System.Collections.Hashtable)" file="8288a5d0-16df-38b7-ada3-ba5b182a4341">
+        <topic id="M:Zamasoft.CTI.DriverManager.getSession(System.Uri,System.Collections.Hashtable)" file="51051b78-63fc-40f2-d30b-881075211ece" />
+        <topic id="M:Zamasoft.CTI.DriverManager.getSession(System.Uri,System.String,System.String)" file="5e4c1890-7073-29d5-3c9d-7b47a26c86ad" />
+      </topic>
+    </topic>
+    <topic id="T:Zamasoft.CTI.Session" file="e6d05433-af77-5be1-8bd9-51ff7b1b6fb8">
+      <topic id="M:Zamasoft.CTI.Session.Abort(Zamasoft.CTI.AbortMode)" file="bdef121b-6539-412e-71b6-e5b7c6a01705" />
+      <topic id="M:Zamasoft.CTI.Session.Close" file="713c410b-d59a-1517-46e8-652af78d85e7" />
+      <topic id="P:Zamasoft.CTI.Session.Continuous" file="b53edcab-030b-4170-b212-53c6278aecac" />
+      <topic id="M:Zamasoft.CTI.Session.GetServerInfo(System.String)" file="94783b70-5146-3420-82fc-cbaa8e541558" />
+      <topic id="M:Zamasoft.CTI.Session.Join" file="15a006ab-1936-93f5-9fa5-20dcd14b1489" />
+      <topic id="P:Zamasoft.CTI.Session.MessageHandler" file="d4179851-9c4f-e1bb-f696-7bc9f3af4d53" />
+      <topic id="P:Zamasoft.CTI.Session.ProgressListener" file="22e4fc2d-d5de-1b1d-3e75-109af0bce53d" />
+      <topic id="M:Zamasoft.CTI.Session.Property(System.String,System.String)" file="ae641a70-fbf8-c70a-b6f3-dae4bec3fbb2" />
+      <topic id="M:Zamasoft.CTI.Session.Reset" file="9a0da729-d40e-09dc-586d-ac01ea992fec" />
+      <topic id="M:Zamasoft.CTI.Session.Resource(Zamasoft.CTI.Source.SourceInfo)" file="7af93ac1-1afa-e515-2863-9cc49caf037e">
+        <topic id="M:Zamasoft.CTI.Session.Resource(Zamasoft.CTI.Source.SourceInfo)" file="5860aca5-88a4-31e6-c4eb-e87b4c4cec7e" />
+        <topic id="M:Zamasoft.CTI.Session.Resource(Zamasoft.CTI.Source.SourceInfo,System.IO.Stream)" file="fc4d0a34-2b3f-e49f-7c8c-5997fa860226" />
+      </topic>
+      <topic id="P:Zamasoft.CTI.Session.Results" file="b53e8209-ca56-e963-bd5e-b82a70fcef4d" />
+      <topic id="P:Zamasoft.CTI.Session.SourceResolver" file="b81e750d-ff96-38a9-4925-13bbf5560dd2" />
+      <topic id="M:Zamasoft.CTI.Session.Transcode(System.String)" file="f8499cb0-2d3c-fbfe-01f7-fd11c216409e">
+        <topic id="M:Zamasoft.CTI.Session.Transcode(System.String)" file="c89136b7-645a-aef2-59a9-9da39c3738e6" />
+        <topic id="M:Zamasoft.CTI.Session.Transcode(Zamasoft.CTI.Source.SourceInfo)" file="e3a162b8-3d59-9b49-dd45-dfc156399306" />
+        <topic id="M:Zamasoft.CTI.Session.Transcode(Zamasoft.CTI.Source.SourceInfo,System.IO.Stream)" file="796310c2-4d01-403e-eeda-4835638e1908" />
+      </topic>
+    </topic>
+    <topic id="T:Zamasoft.CTI.StateCode" file="6c3b3c6b-ccbf-dbcf-4bd7-90a68e6dc8a6" />
+    <topic id="T:Zamasoft.CTI.TranscoderException" file="0112f835-6601-3d80-66ad-f1b38a4f6ebf">
+      <topic id="M:Zamasoft.CTI.TranscoderException.#ctor(Zamasoft.CTI.StateCode,System.Int16,System.String[],System.String)" file="081775e5-906a-4a99-1627-48d85f92d554" />
+      <topic id="P:Zamasoft.CTI.TranscoderException.Args" file="815a3828-16de-5e2f-d406-72da52f14308" />
+      <topic id="P:Zamasoft.CTI.TranscoderException.Code" file="e11a1c03-00b3-de9f-f488-d791585cf3d4" />
+      <topic id="P:Zamasoft.CTI.TranscoderException.State" file="57468911-df5f-cfa6-9941-e42d15b4cd1d" />
+    </topic>
+    <topic id="T:Zamasoft.CTI.Utils" file="0254f1be-5517-98bd-4b6d-58dbc2421fd3">
+      <topic id="M:Zamasoft.CTI.Utils.#ctor" file="bf5199c7-0794-a4c7-d906-fa471fde768d" />
+      <topic id="M:Zamasoft.CTI.Utils.SendResourceFile(Zamasoft.CTI.Session,System.String,System.String,System.String)" file="4912ec83-540b-873d-c917-0fc744a28155" />
+      <topic id="M:Zamasoft.CTI.Utils.SendResourceStream(Zamasoft.CTI.Session,System.IO.Stream,System.String,System.String,System.String)" file="8ef1a3d3-eebd-826e-f71c-9c63e2589998" />
+      <topic id="M:Zamasoft.CTI.Utils.SetConsoleMessageHander(Zamasoft.CTI.Session)" file="9d137e68-dadb-d721-f7a8-a1795b441285" />
+      <topic id="M:Zamasoft.CTI.Utils.SetErrorMessageHander(Zamasoft.CTI.Session)" file="675becb1-914f-5529-b1fe-fdf8c448e49f" />
+      <topic id="M:Zamasoft.CTI.Utils.SetResultFile(Zamasoft.CTI.Session,System.String)" file="b889d4a4-29fd-79e2-f6ea-0a075f0005e3" />
+      <topic id="M:Zamasoft.CTI.Utils.SetResultStream(Zamasoft.CTI.Session,System.IO.Stream)" file="5b366f95-0e0f-9816-6066-628695458569" />
+      <topic id="M:Zamasoft.CTI.Utils.TranscodeFile(Zamasoft.CTI.Session,System.String,System.String,System.String)" file="1da331ad-c100-d48a-9749-f61fe913ee33" />
+      <topic id="M:Zamasoft.CTI.Utils.TranscodeStream(Zamasoft.CTI.Session,System.IO.Stream,System.String,System.String,System.String)" file="43a4f437-7b6a-8117-a76a-139de0346921" />
+    </topic>
+  </topic>
+  <topic id="N:Zamasoft.CTI.Message" file="827b1f8d-7cd1-f8a0-0438-adc1df867b85">
+    <topic id="T:Zamasoft.CTI.Message.MessageHandler" file="fed06551-1ddf-894a-ff09-6307fa6ebad4">
+      <topic id="M:Zamasoft.CTI.Message.MessageHandler.Message(System.Int16,System.String[],System.String)" file="0c2863a3-cd80-847a-bed0-6c4b2f90a3c2" />
+    </topic>
+  </topic>
+  <topic id="N:Zamasoft.CTI.Progress" file="523fdbe4-9435-a731-534f-0cf456ea29fe">
+    <topic id="T:Zamasoft.CTI.Progress.ProgressListener" file="ae0b3630-feef-2523-dc8a-cf68e63ab43d">
+      <topic id="M:Zamasoft.CTI.Progress.ProgressListener.Progress(System.Int64)" file="34dadff0-19fd-4890-2088-2f7a6d374e67" />
+      <topic id="M:Zamasoft.CTI.Progress.ProgressListener.SourceLength(System.Int64)" file="9adfb985-a9a3-f2ef-2362-02fbbfa4f09d" />
+    </topic>
+  </topic>
+  <topic id="N:Zamasoft.CTI.Result" file="2d6ba499-ce82-792e-cc4d-866b75c5809d">
+    <topic id="T:Zamasoft.CTI.Result.Builder" file="8165a544-5d6e-d300-1f09-2de571e40910">
+      <topic id="M:Zamasoft.CTI.Result.Builder.#ctor(System.IO.Stream)" file="1df314de-7518-4341-23cb-63b4d716dc45">
+        <topic id="M:Zamasoft.CTI.Result.Builder.#ctor(System.IO.Stream)" file="1f1fb5f1-5ba3-af76-c633-3a9614bb0570" />
+        <topic id="M:Zamasoft.CTI.Result.Builder.#ctor(System.IO.Stream,System.Int32,System.Int32,System.Int32)" file="a63ada36-1bb9-137a-dc31-15aa2ab6376f" />
+      </topic>
+      <topic id="M:Zamasoft.CTI.Result.Builder.AddBlock" file="7b82b2f8-a368-0178-5d5c-3b9049037c90" />
+      <topic id="M:Zamasoft.CTI.Result.Builder.CloseBlock(System.Int32)" file="31cc1966-a2b3-7d6c-c92d-81e1d379f34e" />
+      <topic id="M:Zamasoft.CTI.Result.Builder.Dispose" file="7514d541-54f6-c518-babb-6bcd76457d42" />
+      <topic id="F:Zamasoft.CTI.Result.Builder.file" file="b9b91b68-2a5f-bdcc-8e03-820418e6ef76" />
+      <topic id="M:Zamasoft.CTI.Result.Builder.Finish" file="15f42f14-524c-9b7a-ca95-d654efca3a7a" />
+      <topic id="F:Zamasoft.CTI.Result.Builder.first" file="c498177f-2c07-5886-19b5-4faba3a61e3f" />
+      <topic id="F:Zamasoft.CTI.Result.Builder.frgs" file="08697eda-2d07-3cbe-5844-2658aa7eea1b" />
+      <topic id="M:Zamasoft.CTI.Result.Builder.getBlock(System.Int32)" file="55ffcf50-9bc5-b28f-e0c6-6c3f0969ec02" />
+      <topic id="F:Zamasoft.CTI.Result.Builder.info" file="133a1c32-ec17-dc45-5a4e-cfee30624a15" />
+      <topic id="P:Zamasoft.CTI.Result.Builder.Info" file="57109780-f76a-2f45-896f-ba21f2c04e69" />
+      <topic id="M:Zamasoft.CTI.Result.Builder.InsertBlockBefore(System.Int32)" file="e90e529a-98d7-81c7-ab17-6e6ec2e20748" />
+      <topic id="F:Zamasoft.CTI.Result.Builder.last" file="29015ea6-03a6-ead4-7013-9bd3040edd54" />
+      <topic id="F:Zamasoft.CTI.Result.Builder.length" file="f9d4ceb4-0215-b276-3726-7d688fc20a01" />
+      <topic id="M:Zamasoft.CTI.Result.Builder.nextId" file="3542d277-1ee7-a6ea-0880-67764f75c9c0" />
+      <topic id="F:Zamasoft.CTI.Result.Builder.onMemory" file="e0611036-1413-ffc9-0704-a0108b75fcde" />
+      <topic id="F:Zamasoft.CTI.Result.Builder.output" file="070b0256-de9a-cd9d-f913-2dc3e729ee6b" />
+      <topic id="M:Zamasoft.CTI.Result.Builder.putBlock(System.Int32,Zamasoft.CTI.Result.Builder.Block)" file="7b165a12-a88c-7d45-7ed3-4b72174e09d1" />
+      <topic id="F:Zamasoft.CTI.Result.Builder.raf" file="a8c44246-c999-3690-8a87-71f3b7fa3435" />
+      <topic id="F:Zamasoft.CTI.Result.Builder.segment" file="2b56ea5f-6b09-1eda-eb08-246fe645a13b" />
+      <topic id="M:Zamasoft.CTI.Result.Builder.Write(System.Byte[],System.Int32,System.Int32)" file="a4c66696-bda7-ebd6-7d89-44e6e97d38a7">
+        <topic id="M:Zamasoft.CTI.Result.Builder.Write(System.Byte[],System.Int32,System.Int32)" file="a98f199e-aae5-ae52-fbd1-7b7c33f21cbf" />
+        <topic id="M:Zamasoft.CTI.Result.Builder.Write(System.Int32,System.Byte[],System.Int32,System.Int32)" file="7578df50-cebc-10e6-cea7-6feabba0b14d" />
+      </topic>
+    </topic>
+    <topic id="T:Zamasoft.CTI.Result.Builder.Block" file="1fec377e-7ecf-a33a-5ce7-803566632561">
+      <topic id="M:Zamasoft.CTI.Result.Builder.Block.#ctor(Zamasoft.CTI.Result.Builder,System.Int32)" file="e661dbc6-3b9a-07f9-5fa0-b438889dfeae" />
+      <topic id="M:Zamasoft.CTI.Result.Builder.Block.close" file="641d9168-4fed-6748-18a7-2c556b789992" />
+      <topic id="M:Zamasoft.CTI.Result.Builder.Block.dispose" file="a00fdedf-48ea-1283-1e18-dd29b3ab59f4" />
+      <topic id="M:Zamasoft.CTI.Result.Builder.Block.getId" file="d07987e0-fbce-ead4-3dc7-ae33fe676983" />
+      <topic id="M:Zamasoft.CTI.Result.Builder.Block.getLength" file="7f429040-6663-55f9-85b9-17ab389ff6da" />
+      <topic id="F:Zamasoft.CTI.Result.Builder.Block.next" file="d418d204-c3f5-25c9-a01a-50733aef4ed6" />
+      <topic id="F:Zamasoft.CTI.Result.Builder.Block.prev" file="12ed60e2-6ed3-071f-8f79-5d5a2b943ab3" />
+      <topic id="M:Zamasoft.CTI.Result.Builder.Block.write(System.Byte[],System.Int32,System.Int32)" file="ed51967f-12a4-1277-5709-57a819621572" />
+      <topic id="M:Zamasoft.CTI.Result.Builder.Block.writeTo(System.IO.Stream)" file="eb23262d-a995-09f1-afa6-c13b063473d0" />
+    </topic>
+    <topic id="T:Zamasoft.CTI.Result.FileResults" file="5845b8e2-aa22-70b1-922f-15d6830b1d19">
+      <topic id="M:Zamasoft.CTI.Result.FileResults.#ctor(System.String,System.String)" file="baad7bd7-c930-e836-c25e-4b92ab445331" />
+      <topic id="F:Zamasoft.CTI.Result.FileResults.counter" file="3bb93549-bcb0-dc87-46bc-d3c5a6f2c443" />
+      <topic id="M:Zamasoft.CTI.Result.FileResults.End" file="f2c9c002-ba47-d72f-9a16-088ea69530b0" />
+      <topic id="M:Zamasoft.CTI.Result.FileResults.HasNext" file="8e01d1ae-e2ad-43e5-082c-c5549b46492f" />
+      <topic id="M:Zamasoft.CTI.Result.FileResults.NextBuilder(Zamasoft.CTI.Source.SourceInfo)" file="efc669af-46a4-b799-e74d-81de2ac8ffc3" />
+      <topic id="F:Zamasoft.CTI.Result.FileResults.prefix" file="d0fa6ca6-b253-849e-4fd4-177ea7338b3b" />
+      <topic id="F:Zamasoft.CTI.Result.FileResults.suffix" file="c3b3c25e-37c1-7537-9930-2a4e614d50ca" />
+    </topic>
+    <topic id="T:Zamasoft.CTI.Result.Results" file="b3f86b58-dac7-511e-2600-0499651e64a5">
+      <topic id="M:Zamasoft.CTI.Result.Results.End" file="3e05c704-1182-c87c-11bd-b328ff5dd60e" />
+      <topic id="M:Zamasoft.CTI.Result.Results.HasNext" file="31b9a38f-8cfe-041d-5d4a-aa4add48bb8c" />
+      <topic id="M:Zamasoft.CTI.Result.Results.NextBuilder(Zamasoft.CTI.Source.SourceInfo)" file="0bceb1d3-7036-234a-56f5-8a950a387298" />
+    </topic>
+    <topic id="T:Zamasoft.CTI.Result.SingleResult" file="9c16abe2-dbfc-f827-2f59-23cfc392a7c5">
+      <topic id="M:Zamasoft.CTI.Result.SingleResult.#ctor(System.IO.Stream)" file="40defad4-7c4a-108c-ba99-d2a9c6fbaf09">
+        <topic id="M:Zamasoft.CTI.Result.SingleResult.#ctor(System.IO.Stream)" file="326ac3a4-600a-bdf1-6622-ba08bdeabb3b" />
+        <topic id="M:Zamasoft.CTI.Result.SingleResult.#ctor(System.String)" file="ec810580-6c64-3c20-4b04-c2d8361a6802" />
+        <topic id="M:Zamasoft.CTI.Result.SingleResult.#ctor(Zamasoft.CTI.Result.Builder)" file="1d954b26-8311-1fb6-7ff3-812390d95ce6" />
+      </topic>
+      <topic id="F:Zamasoft.CTI.Result.SingleResult.builder" file="f36f960e-e099-4be9-22da-90392f0beed7" />
+      <topic id="M:Zamasoft.CTI.Result.SingleResult.End" file="064a77ac-f7f5-9bbe-afac-349e2a17f7e5" />
+      <topic id="F:Zamasoft.CTI.Result.SingleResult.file" file="4f50c0a4-becf-1260-8180-0b08aa5dc3e2" />
+      <topic id="M:Zamasoft.CTI.Result.SingleResult.HasNext" file="46ec2b6b-3c5a-a8cb-abf7-acf2ab0684ce" />
+      <topic id="M:Zamasoft.CTI.Result.SingleResult.NextBuilder(Zamasoft.CTI.Source.SourceInfo)" file="95dfadfa-72d7-e5a1-a2e6-08b5885360dd" />
+    </topic>
+  </topic>
+  <topic id="N:Zamasoft.CTI.Source" file="df0ba082-34e2-e548-f799-be919c42401c">
+    <topic id="T:Zamasoft.CTI.Source.SourceInfo" file="657599f3-0f5a-4313-9665-68ee4578f4f7">
+      <topic id="M:Zamasoft.CTI.Source.SourceInfo.#ctor(System.String)" file="747549b5-d4a6-31e5-fc22-c340c08f97ac">
+        <topic id="M:Zamasoft.CTI.Source.SourceInfo.#ctor(System.String)" file="02392c75-de10-78aa-119c-74d4dca6a335" />
+        <topic id="M:Zamasoft.CTI.Source.SourceInfo.#ctor(System.String,System.String)" file="c44febd8-a416-6519-49bf-1656a3922092" />
+        <topic id="M:Zamasoft.CTI.Source.SourceInfo.#ctor(System.String,System.String,System.String)" file="081c5955-b595-f5f5-5e5a-48bd3e3afb03" />
+        <topic id="M:Zamasoft.CTI.Source.SourceInfo.#ctor(System.String,System.String,System.String,System.Int64)" file="4a30fd7e-c589-6377-a154-2ebcd0b3a2c0" />
+      </topic>
+      <topic id="P:Zamasoft.CTI.Source.SourceInfo.Encoding" file="73cf4417-367d-c19e-4d68-5622b98500b1" />
+      <topic id="P:Zamasoft.CTI.Source.SourceInfo.Length" file="3e70c41c-967c-356c-22cf-eee26367e64f" />
+      <topic id="P:Zamasoft.CTI.Source.SourceInfo.MimeType" file="d3b7709e-1821-754f-8873-c12825574c62" />
+      <topic id="P:Zamasoft.CTI.Source.SourceInfo.Uri" file="dae93a65-943c-ea0f-8ffc-9e26a5480106" />
+    </topic>
+    <topic id="T:Zamasoft.CTI.Source.SourceResolver" file="ecad73e5-9016-36ca-844d-5a2ffccf83f1">
+      <topic id="M:Zamasoft.CTI.Source.SourceResolver.Resolve(System.String,Zamasoft.CTI.Source.SourceInfo@)" file="c2a2a8e3-c31f-c7d0-fa2c-a29da40b736d" />
+    </topic>
+  </topic>
+</topics>

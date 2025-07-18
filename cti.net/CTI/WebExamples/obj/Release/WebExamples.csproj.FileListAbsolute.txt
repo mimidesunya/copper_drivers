@@ -1,0 +1,9 @@
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamples\bin\WebExamples.dll.config
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamples\bin\WebExamples.dll
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamples\bin\WebExamples.pdb
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamples\bin\CTI.dll
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamples\bin\CTI.pdb
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamples\bin\CTI.xml
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamples\obj\Release\WebExamples.csprojResolveAssemblyReference.cache
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamples\obj\Release\WebExamples.dll
+Z:\workspaces\copper_ext\cti.net\CTI\WebExamples\obj\Release\WebExamples.pdb

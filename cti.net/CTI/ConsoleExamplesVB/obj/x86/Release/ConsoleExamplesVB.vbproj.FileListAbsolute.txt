@@ -1,0 +1,14 @@
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamplesVB\bin\Release\files\test.css
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamplesVB\bin\Release\files\test.html
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamplesVB\bin\Release\ConsoleExamplesVB.exe
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamplesVB\bin\Release\ConsoleExamplesVB.pdb
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamplesVB\bin\Release\ConsoleExamplesVB.xml
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamplesVB\bin\Release\CTI.dll
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamplesVB\bin\Release\CTI.pdb
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamplesVB\bin\Release\CTI.xml
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamplesVB\obj\x86\Release\ConsoleExamplesVB.vbprojResolveAssemblyReference.cache
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamplesVB\obj\x86\Release\ConsoleExamplesVB.Resources.resources
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamplesVB\obj\x86\Release\ConsoleExamplesVB.vbproj.GenerateResource.Cache
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamplesVB\obj\x86\Release\ConsoleExamplesVB.exe
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamplesVB\obj\x86\Release\ConsoleExamplesVB.xml
+Z:\workspaces\copper_ext\cti.net\CTI\ConsoleExamplesVB\obj\x86\Release\ConsoleExamplesVB.pdb
