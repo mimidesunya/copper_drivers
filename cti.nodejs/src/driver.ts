@@ -1,9 +1,28 @@
-const net = require('net');
-const tls = require('tls');
-const { Session } = require('./session');
+/**
+ * Driver Module
+ * 
+ * This module provides the Driver class for creating sessions to Copper PDF servers.
+ */
 
-class Driver {
-    getSession(uri, options = {}) {
+import * as net from 'net';
+import * as tls from 'tls';
+import { Session, SessionOptions } from './session';
+
+/** Extended session options including TLS settings */
+export interface DriverOptions extends SessionOptions {
+    /** Whether to reject unauthorized SSL certificates (default: true) */
+    rejectUnauthorized?: boolean;
+}
+
+/** Driver for connecting to Copper PDF servers */
+export class Driver {
+    /**
+     * Create a session to a Copper PDF server
+     * @param uri - Server URI (ctip://host:port/ or ctips://host:port/)
+     * @param options - Connection options
+     * @returns A new Session instance
+     */
+    getSession(uri: string, options: DriverOptions = {}): Session {
         let host = 'localhost';
         let port = 8099;
         let useSSL = false;
@@ -11,7 +30,7 @@ class Driver {
         // Simple URI parsing
         // ctip://host:port/
         // ctips://host:port/
-        
+
         let match = uri.match(/^ctips:\/\/([^:/]+):([0-9]+)\/?$/);
         if (match) {
             useSSL = true;
@@ -36,10 +55,9 @@ class Driver {
             }
         }
 
-        let socket;
+        let socket: net.Socket | tls.TLSSocket;
         if (useSSL) {
-            // Options for SSL (e.g. self-signed certs) can be passed in options
-            const tlsOptions = {
+            const tlsOptions: tls.ConnectionOptions = {
                 rejectUnauthorized: options.rejectUnauthorized !== undefined ? options.rejectUnauthorized : true
             };
             socket = tls.connect(port, host, tlsOptions);
@@ -50,7 +68,3 @@ class Driver {
         return new Session(socket, options);
     }
 }
-
-module.exports = {
-    Driver
-};

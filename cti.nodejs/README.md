@@ -3,29 +3,30 @@
 Node.jsを使ってCopper PDF 2.1以降にアクセスするための公式ドライバです。
 CTIP (Copper Transaction Interlace Protocol) 2.0 に対応しています。
 
+**TypeScriptで実装されており、完全な型定義を提供します。**
+
 ## 動作環境
 
 * Node.js 14以降
 
 ## インストール
 
-npmはGitリポジトリのサブディレクトリからの直接インストールをサポートしていないため、リポジトリをクローンしてからローカルパスを指定してインストールします。
+### npmからインストール（公開後）
+
+```bash
+npm install copper-cti
+```
+
+### Gitリポジトリからインストール
 
 ```bash
 git clone https://github.com/mimidesunya/copper_drivers.git
-npm install ./copper_drivers/cti.nodejs --install-links
-```
-
-※Windows環境などでシンボリックリンクのエラーが発生する場合は、`--install-links` オプションを付与することでファイルをコピーしてインストールできます。または、以下のようにパッケージ化してからインストールしてください。
-
-```bash
 cd copper_drivers/cti.nodejs
-npm pack
+npm install
+npm run build
 cd ../..
-npm install ./copper_drivers/cti.nodejs/copper-cti-nodejs-1.0.0.tgz
+npm install ./copper_drivers/cti.nodejs
 ```
-
-または、ご自身のプロジェクトに `cti.nodejs` ディレクトリをダウンロード・コピーして使用することも可能です。
 
 ## 使い方
 
@@ -33,10 +34,10 @@ npm install ./copper_drivers/cti.nodejs/copper-cti-nodejs-1.0.0.tgz
 
 ### 基本的な変換 (ファイル出力)
 
-```javascript
-const { get_session } = require('copper-cti-nodejs');
-const fs = require('fs');
-const path = require('path');
+```typescript
+import { get_session } from 'copper-cti';
+import * as fs from 'fs';
+import * as path from 'path';
 
 async function main() {
     // Copper PDFサーバーに接続 (例: ctip://cti.li/)
@@ -63,7 +64,6 @@ async function main() {
         });
 
         // 変換開始 (ストリームへの書き込み)
-        // transcode() の引数にリソースのベースパスを指定できます ('.' はカレントディレクトリ)
         const writer = session.transcode('.');
         
         // HTMLを流し込む
@@ -84,10 +84,10 @@ async function main() {
 main();
 ```
 
-### ストリームの使用 (標準出力など)
+### JavaScript (CommonJS) での使用
 
 ```javascript
-const { get_session } = require('copper-cti-nodejs');
+const { get_session } = require('copper-cti');
 const fs = require('fs');
 
 async function main() {
@@ -97,7 +97,37 @@ async function main() {
     });
 
     try {
-        // 結果を標準出力に流す (バイナリ破壊に注意: PowerShellなどではリダイレクトに問題がある場合があります)
+        session.setOutputAsFile('output/result.pdf');
+        
+        const writer = session.transcode('.');
+        fs.createReadStream('index.html').pipe(writer);
+
+        await session.waitForCompletion();
+        console.log('PDF generated successfully');
+    } catch (err) {
+        console.error('Error:', err);
+    } finally {
+        session.close();
+    }
+}
+
+main();
+```
+
+### ストリームの使用 (標準出力など)
+
+```typescript
+import { get_session } from 'copper-cti';
+import * as fs from 'fs';
+
+async function main() {
+    const session = get_session('ctip://cti.li/', {
+        user: 'user',
+        password: 'kappa'
+    });
+
+    try {
+        // 結果を標準出力に流す
         session.setOutputAsStream(process.stdout);
 
         const writer = session.transcode('.');
@@ -116,26 +146,114 @@ main();
 
 ### プロパティの設定
 
-```javascript
+```typescript
 session.setProperty('output.pdf.version', '1.5');
 ```
 
-## ドキュメント
+### リソース解決（CSS、画像など）
 
-APIドキュメントは JSDoc 形式で記述されています。以下のコマンドで生成できます。
+```typescript
+import { get_session, Resource } from 'copper-cti';
+import * as fs from 'fs';
+import * as path from 'path';
 
-```bash
-cd cti.nodejs
-npm run doc
+async function main() {
+    const session = get_session('ctip://cti.li/', {
+        user: 'user',
+        password: 'kappa'
+    });
+
+    try {
+        session.setOutputAsFile('output/result.pdf');
+
+        // リソース解決コールバックを設定
+        session.setResolverFunc((uri: string, resource: Resource) => {
+            const localPath = path.join(__dirname, uri);
+            if (fs.existsSync(localPath)) {
+                const out = resource.found({ mime_type: 'text/css' });
+                fs.createReadStream(localPath).pipe(out);
+            }
+            // リソースが見つからない場合は resource.found() を呼ばない
+        });
+
+        const writer = session.transcode('.');
+        fs.createReadStream('index.html').pipe(writer);
+
+        await session.waitForCompletion();
+    } finally {
+        session.close();
+    }
+}
+
+main();
 ```
 
-生成されたドキュメントは `docs/` ディレクトリに出力されます。 `docs/index.html` をブラウザで開いて確認してください。
+## API
+
+### 主要な型
+
+```typescript
+// セッションオプション
+interface SessionOptions {
+    user?: string;
+    password?: string;
+    encoding?: string;
+}
+
+// トランスコードオプション
+interface TranscodeOptions {
+    mimeType?: string;    // デフォルト: 'text/html'
+    encoding?: string;    // デフォルト: 'UTF-8'
+    length?: number;      // デフォルト: -1 (不明)
+}
+
+// メッセージコールバック
+type MessageCallback = (code: number, message: string, args: string[]) => void;
+
+// 進捗コールバック
+type ProgressCallback = (total: number | null, read: number) => void;
+
+// リソース解決コールバック
+type ResolverCallback = (uri: string, resource: Resource) => void | Promise<void>;
+```
+
+### Session クラスの主要メソッド
+
+| メソッド | 説明 |
+| :--- | :--- |
+| `setOutputAsFile(path)` | PDFをファイルに出力 |
+| `setOutputAsStream(stream)` | PDFをストリームに出力 |
+| `setOutputAsDirectory(dir, prefix, suffix)` | PDFをディレクトリに連番で出力 |
+| `setMessageFunc(callback)` | メッセージコールバックを設定 |
+| `setProgressFunc(callback)` | 進捗コールバックを設定 |
+| `setResolverFunc(callback)` | リソース解決コールバックを設定 |
+| `setProperty(name, value)` | プロパティを設定 |
+| `transcode(uri?, opts?)` | 変換を開始（Writableを返す） |
+| `waitForCompletion()` | 変換完了を待機 |
+| `close()` | セッションを閉じる |
 
 ## ディレクトリ構成
 
-* `src/`: ドライバのソースコード
-* `examples/`: 使用例 (ファイル出力、標準出力、ディレクトリ出力、リソース解決)
-* `docs/`: 生成されたドキュメント (生成後)
+```
+cti.nodejs/
+├── src/           # TypeScriptソースコード
+├── dist/          # コンパイル済みJavaScript + 型定義
+├── examples/      # 使用例
+└── package.json
+```
+
+## 開発
+
+```bash
+# 依存関係のインストール
+npm install
+
+# TypeScriptをコンパイル
+npm run build
+
+# サンプルを実行
+node examples/output-file.js
+```
 
 ## ライセンス
 

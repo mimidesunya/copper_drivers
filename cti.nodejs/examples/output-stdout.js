@@ -1,4 +1,4 @@
-const { get_session } = require('../src');
+const { get_session } = require('../dist');
 const fs = require('fs');
 
 /**

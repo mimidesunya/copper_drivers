@@ -1,4 +1,4 @@
-const { Driver, get_session } = require('../src');
+const { Driver, get_session } = require('../dist');
 const fs = require('fs');
 const path = require('path');
 
