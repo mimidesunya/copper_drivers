@@ -10,14 +10,14 @@ async function main() {
     // 使用法: node output-dir.js <HTMLファイル> <出力ディレクトリ> [URI]
     // デフォルトURI: ctip://cti.li/
 
-    if (process.argv.length < 3) {
-        console.log('Usage: node output-dir.js <HTML_FILE> [OUTPUT_DIR] [URI]');
-        process.exit(1);
-    }
+    // サンプル用に値をハードコード
+    const htmlFile = path.join(__dirname, 'test.html');
+    const outDir = path.join(__dirname, '../output/dir');
+    const uri = 'ctip://cti.li/';
 
-    const htmlFile = process.argv[2];
-    const outDir = process.argv[3] || 'output/dir';
-    const uri = process.argv[4] || 'ctip://cti.li/';
+    console.log(`HTML File: ${htmlFile}`);
+    console.log(`Output Directory: ${outDir}`);
+    console.log(`URI: ${uri}`);
 
     if (!fs.existsSync(outDir)) {
         fs.mkdirSync(outDir, { recursive: true });

@@ -9,12 +9,23 @@ CTIP (Copper Transaction Interlace Protocol) 2.0 に対応しています。
 
 ## インストール
 
-このリポジトリをクローンするか、プロジェクトに含めて使用してください。
-Git経由でインストールすることも可能です。
+npmはGitリポジトリのサブディレクトリからの直接インストールをサポートしていないため、リポジトリをクローンしてからローカルパスを指定してインストールします。
 
 ```bash
-npm install git+https://github.com/mimidesunya/copper_drivers/cti.nodejs
+git clone https://github.com/mimidesunya/copper_drivers.git
+npm install ./copper_drivers/cti.nodejs --install-links
 ```
+
+※Windows環境などでシンボリックリンクのエラーが発生する場合は、`--install-links` オプションを付与することでファイルをコピーしてインストールできます。または、以下のようにパッケージ化してからインストールしてください。
+
+```bash
+cd copper_drivers/cti.nodejs
+npm pack
+cd ../..
+npm install ./copper_drivers/cti.nodejs/copper-cti-nodejs-1.0.0.tgz
+```
+
+または、ご自身のプロジェクトに `cti.nodejs` ディレクトリをダウンロード・コピーして使用することも可能です。
 
 ## 使い方
 
@@ -23,29 +34,45 @@ npm install git+https://github.com/mimidesunya/copper_drivers/cti.nodejs
 ### 基本的な変換 (ファイル出力)
 
 ```javascript
-const { get_session } = require('copper-cti-nodejs'); 
-// ローカルパスの場合は require('./src/index') など
+const { get_session } = require('copper-cti-nodejs');
+const fs = require('fs');
+const path = require('path');
 
 async function main() {
-    // Copper PDFサーバーに接続
-    // 公開サーバーなどを指定できます (例: ctip://cti.li/)
-    const session = get_session('ctip://localhost:8099', {
-        user: 'user',        // 認証が必要な場合
-        password: 'password'
+    // Copper PDFサーバーに接続 (例: ctip://cti.li/)
+    const session = get_session('ctip://cti.li/', {
+        user: 'user',
+        password: 'kappa'
     });
 
     try {
+        const outFile = 'output/result.pdf';
+        
+        // 出力先ディレクトリがない場合は作成
+        const outDir = path.dirname(outFile);
+        if (!fs.existsSync(outDir)) {
+            fs.mkdirSync(outDir, { recursive: true });
+        }
+
         // 結果の出力先をファイルに指定
-        session.setOutputAsFile('output/result.pdf');
+        session.setOutputAsFile(outFile);
+
+        // 変換中のメッセージを表示するハンドラ
+        session.setMessageFunc((code, msg, args) => {
+            console.log(`Message [${code}]: ${msg}`);
+        });
 
         // 変換開始 (ストリームへの書き込み)
-        const input = session.transcode('.');
-        input.write('<html><body><h1>Hello, Copper PDF!</h1></body></html>');
-        input.end();
+        // transcode() の引数にリソースのベースパスを指定できます ('.' はカレントディレクトリ)
+        const writer = session.transcode('.');
+        
+        // HTMLを流し込む
+        writer.write('<html><body><h1>Hello, Copper PDF!</h1></body></html>');
+        writer.end();
 
         // 変換完了を待機
         await session.waitForCompletion();
-        console.log('PDF generated successfully.');
+        console.log(`PDF generated successfully: ${outFile}`);
 
     } catch (err) {
         console.error('Error:', err);
@@ -61,23 +88,36 @@ main();
 
 ```javascript
 const { get_session } = require('copper-cti-nodejs');
+const fs = require('fs');
 
-const session = get_session('ctip://localhost:8099');
+async function main() {
+    const session = get_session('ctip://cti.li/', {
+        user: 'user',
+        password: 'kappa'
+    });
 
-// 結果を標準出力に流す (バイナリ破壊に注意: PowerShellなどではリダイレクトに問題がある場合があります)
-session.setOutput(process.stdout);
+    try {
+        // 結果を標準出力に流す (バイナリ破壊に注意: PowerShellなどではリダイレクトに問題がある場合があります)
+        session.setOutputAsStream(process.stdout);
 
-const input = session.transcode('.');
-fs.createReadStream('index.html').pipe(input);
+        const writer = session.transcode('.');
+        fs.createReadStream('index.html').pipe(writer);
 
-await session.waitForCompletion();
-session.close();
+        await session.waitForCompletion();
+    } catch (err) {
+        console.error(err);
+    } finally {
+        session.close();
+    }
+}
+
+main();
 ```
 
 ### プロパティの設定
 
 ```javascript
-session.setProperty('cssj.page.size', 'A4');
+session.setProperty('output.pdf.version', '1.5');
 ```
 
 ## ドキュメント
@@ -85,8 +125,11 @@ session.setProperty('cssj.page.size', 'A4');
 APIドキュメントは JSDoc 形式で記述されています。以下のコマンドで生成できます。
 
 ```bash
-npx jsdoc -c jsdoc.json
+cd cti.nodejs
+npm run doc
 ```
+
+生成されたドキュメントは `docs/` ディレクトリに出力されます。 `docs/index.html` をブラウザで開いて確認してください。
 
 ## ディレクトリ構成
 

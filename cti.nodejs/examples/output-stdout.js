@@ -9,13 +9,13 @@ async function main() {
     // 使用法: node output-stdout.js [HTMLファイル] [URI]
     // デフォルトURI: ctip://cti.li/
     
-    if (process.argv.length < 3) {
-        console.error('Usage: node output-stdout.js <HTML_FILE> [URI]');
-        process.exit(1);
-    }
-
-    const htmlFile = process.argv[2];
-    const uri = process.argv[3] || 'ctip://cti.li/';
+    // サンプル用に値をハードコード
+    const path = require('path'); // Ensure path is available if not already
+    const htmlFile = path.join(__dirname, 'test.html');
+    const uri = 'ctip://cti.li/';
+    
+    console.error(`HTML File: ${htmlFile}`); // Log to stderr to not interfere with stdout PDF output
+    console.error(`URI: ${uri}`);
 
     // セッションの作成
     const session = get_session(uri, { user: 'user', password: 'kappa' });

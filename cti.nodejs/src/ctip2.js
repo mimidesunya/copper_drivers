@@ -30,7 +30,7 @@ const MSG = {
     RES_ABORT: 0x32,
     RES_NEXT: 0x33,
 
-    CTI_BUFFER_SIZE: 1024
+    CTI_BUFFER_SIZE: 8192
 };
 
 // --- Write Helpers ---

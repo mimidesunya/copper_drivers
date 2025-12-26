@@ -8,18 +8,16 @@ const path = require('path');
  * 使用法: node resolver.js <URI> <HTMLファイル> <出力PDFファイル>
  */
 async function main() {
-    // 使用法: node resolver.js <HTMLファイル> <出力PDFファイル> [URI]
-    // デフォルトURI: ctip://cti.li/
+    console.log('Starting resolver.js...');
+    // サンプル用に値をハードコード
+    const htmlFile = path.join(__dirname, 'test_resolver.html');
+    const outFile = path.join(__dirname, '../output/resolver.pdf');
+    const uri = 'ctip://cti.li/';
+    const baseDir = path.dirname(htmlFile);
 
-    if (process.argv.length < 3) {
-        console.log('Usage: node resolver.js <HTML_FILE> [OUTPUT_PDF] [URI]');
-        process.exit(1);
-    }
-
-    const htmlFile = process.argv[2];
-    const outFile = process.argv[3] || 'output/resolver.pdf';
-    const uri = process.argv[4] || 'ctip://cti.li/';
-    const baseDir = path.dirname(path.resolve(htmlFile));
+    console.log(`HTML File: ${htmlFile}`);
+    console.log(`Output File: ${outFile}`);
+    console.log(`URI: ${uri}`);
 
     // Ensure output directory exists
     const outDir = path.dirname(outFile);
@@ -63,8 +61,10 @@ async function main() {
             }
         });
 
+        console.log('Sending HTML content...');
         const input = session.transcode();
         fs.createReadStream(htmlFile).pipe(input);
+        console.log('HTML content piped, waiting for completion...');
 
         await session.waitForCompletion();
         console.log(`Created ${outFile}`);

@@ -7,17 +7,14 @@ const path = require('path');
  * 使用法: node output-file.js <URI> <HTMLファイル> <出力PDFファイル>
  */
 async function main() {
-    // 使用法: node output-file.js <HTMLファイル> <出力PDFファイル> [URI]
-    // デフォルトURI: ctip://cti.li/
-
-    if (process.argv.length < 3) {
-        console.log('Usage: node output-file.js <HTML_FILE> [OUTPUT_PDF] [URI]');
-        process.exit(1);
-    }
-
-    const htmlFile = process.argv[2];
-    const outFile = process.argv[3] || 'output/file.pdf';
-    const uri = process.argv[4] || 'ctip://cti.li/';
+    // サンプル用に値をハードコード
+    const htmlFile = path.join(__dirname, 'test.html');
+    const outFile = path.join(__dirname, '../output/file.pdf');
+    const uri = 'ctip://cti.li/';
+    
+    console.log(`HTML File: ${htmlFile}`);
+    console.log(`Output File: ${outFile}`);
+    console.log(`URI: ${uri}`);
 
     // Ensure output directory exists
     const outDir = path.dirname(outFile);
@@ -36,8 +33,8 @@ async function main() {
             console.error(`Message [${code}]: ${msg}`, args);
         });
 
-        const input = session.transcode();
-        fs.createReadStream(htmlFile).pipe(input);
+        const writer = session.transcode();
+        fs.createReadStream(htmlFile).pipe(writer);
 
         await session.waitForCompletion();
         console.log(`Successfully created ${outFile}`);

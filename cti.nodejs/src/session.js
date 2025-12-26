@@ -32,16 +32,40 @@ class MainOut extends Writable {
     constructor(session, options) {
         super(options);
         this.session = session;
+        this.buffer = Buffer.alloc(MSG.CTI_BUFFER_SIZE);
+        this.pos = 0;
     }
 
+
+    
+    // Easier Re-implementation of _write using recursion for backpressure support
     _write(chunk, encoding, callback) {
-        try {
-            const buf = req_data(chunk);
-            if (!this.session.send(buf)) {
-                 this.session.socket.once('drain', callback);
-            } else {
-                 callback();
+        let srcOff = 0;
+        
+        const processChunk = () => {
+            if (srcOff >= chunk.length) {
+                return callback();
             }
+            
+            const remaining = MSG.CTI_BUFFER_SIZE - this.pos;
+            const copylen = Math.min(remaining, chunk.length - srcOff);
+            chunk.copy(this.buffer, this.pos, srcOff, srcOff + copylen);
+            this.pos += copylen;
+            srcOff += copylen;
+
+            if (this.pos >= MSG.CTI_BUFFER_SIZE) {
+                const buf = req_data(this.buffer);
+                this.pos = 0;
+                if (!this.session.send(buf)) {
+                    this.session.socket.once('drain', processChunk);
+                    return;
+                }
+            }
+            processChunk();
+        };
+        
+        try {
+            processChunk();
         } catch (err) {
             callback(err);
         }
@@ -49,10 +73,20 @@ class MainOut extends Writable {
 
     _final(callback) {
         try {
+            this.flush();
             this.session.send(req_eof());
             callback();
         } catch (err) {
             callback(err);
+        }
+    }
+    
+    flush() {
+        if (this.pos > 0) {
+            const slice = this.buffer.slice(0, this.pos);
+            const buf = req_data(slice);
+            this.session.send(buf);
+            this.pos = 0;
         }
     }
 }
@@ -61,34 +95,64 @@ class ResourceOut extends Writable {
     constructor(session, options) {
         super(options);
         this.session = session;
-        this.closed = false;
+        this._closed = false;
+        this.buffer = Buffer.alloc(MSG.CTI_BUFFER_SIZE);
+        this.pos = 0;
     }
 
     _write(chunk, encoding, callback) {
-        // Implement backpressure handling like MainOut
-        try {
-            const buf = req_data(chunk);
-            if (!this.session.send(buf)) {
-                 this.session.socket.once('drain', callback);
-            } else {
-                 callback();
+        let srcOff = 0;
+        
+        const processChunk = () => {
+            if (srcOff >= chunk.length) {
+                return callback();
             }
+            
+            const remaining = MSG.CTI_BUFFER_SIZE - this.pos;
+            const copylen = Math.min(remaining, chunk.length - srcOff);
+            chunk.copy(this.buffer, this.pos, srcOff, srcOff + copylen);
+            this.pos += copylen;
+            srcOff += copylen;
+
+            if (this.pos >= MSG.CTI_BUFFER_SIZE) {
+                const buf = req_data(this.buffer);
+                this.pos = 0;
+                if (!this.session.send(buf)) {
+                    this.session.socket.once('drain', processChunk);
+                    return;
+                }
+            }
+            processChunk();
+        };
+        
+        try {
+            processChunk();
         } catch (err) {
             callback(err);
         }
     }
 
     _final(callback) {
-        if (!this.closed) {
+        if (!this._closed) {
             try {
+                this.flush();
                 this.session.send(req_eof());
-                this.closed = true;
+                this._closed = true;
                 callback();
             } catch (err) {
                 callback(err);
             }
         } else {
             callback();
+        }
+    }
+    
+    flush() {
+        if (this.pos > 0) {
+            const slice = this.buffer.slice(0, this.pos);
+            const buf = req_data(slice);
+            this.session.send(buf);
+            this.pos = 0;
         }
     }
 }
@@ -104,7 +168,7 @@ class Resource {
     found(opts = {}) {
         const mimeType = opts.mime_type || 'text/css';
         const encoding = opts.encoding || '';
-        const length = opts.length || -1;
+        const length = (opts.length !== undefined) ? opts.length : -1;
         
         this.session.send(req_start_resource(this.uri, mimeType, encoding, length));
         this.isMissing = false;
@@ -164,9 +228,13 @@ class Session {
     }
 
     _initConnection() {
+        const encoding = this.options.encoding || 'UTF-8';
+        const user = this.options.user || '';
+        const password = this.options.password || '';
+
         // Authenticate
-        this.socket.write(`CTIP/2.0 ${this.encoding}\n`);
-        const authLine = `PLAIN: ${this.user} ${this.password}\n`;
+        this.socket.write(`CTIP/2.0 ${encoding}\n`);
+        const authLine = `PLAIN: ${user} ${password}\n`;
         this.socket.write(authLine);
         
         // Handshake buffer for robust parsing
@@ -210,8 +278,17 @@ class Session {
             return;
         }
 
+
         this.parser.append(data);
-        this._processPackets();
+        this._enqueueProcessPackets();
+    }
+
+    // Serialize packet processing to avoid race conditions
+    _enqueueProcessPackets() {
+        if (!this._processingPromise) {
+            this._processingPromise = Promise.resolve();
+        }
+        this._processingPromise = this._processingPromise.then(() => this._processPackets());
     }
 
     async _processPackets() {
@@ -328,17 +405,23 @@ class Session {
     }
 
     _onClose() {
+        // console.log('DEBUG: Session Socket closed');
         this.state = 3;
         if (this.builder) {
              this.builder.dispose(); 
         }
+        if (this._rejectCompletion) {
+            this._rejectCompletion(new Error('Connection closed unexpectedly during transcoding'));
+            this._rejectCompletion = null;
+            this._resolveCompletion = null;
+        }
     }
     
     _resolveCompletion() {
-        if (this.completionResolve) {
-            this.completionResolve();
-            this.completionResolve = null;
-            this.completionReject = null;
+        if (this._resolveCompletion) {
+            this._resolveCompletion();
+            this._resolveCompletion = null;
+            this._rejectCompletion = null;
         }
     }
 
@@ -414,7 +497,7 @@ class Session {
         if (this.state >= 2) throw new IllegalStateError("Main content already sent");
         const mimeType = opts.mime_type || 'text/css';
         const encoding = opts.encoding || '';
-        const length = opts.length || -1;
+        const length = (opts.length !== undefined) ? opts.length : -1;
         
         this.send(req_start_resource(uri, mimeType, encoding, length));
         return new ResourceOut(this);
